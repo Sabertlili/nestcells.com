@@ -1,5 +1,5 @@
 const siteConfig = {
-  downloadUrl: "https://github.com/Sabertlili/signalwall/releases/tag/v0.1.0",
+  downloadUrl: "https://github.com/Sabertlili/signalwall/releases/download/v0.1.0/SignalWallSetup-v0.1.0-win-x64.exe",
   supportUrl: "",
   quotes: [
     ["Every pixel argues for attention. Most should lose.", "Design note"],
