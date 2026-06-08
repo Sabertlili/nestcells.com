@@ -21,6 +21,7 @@
     <div class="topbar-actions">
       <nav aria-label="Primary">
         <a href="#install" data-i18n="navInstall">Install</a>
+        <a href="#preview" data-i18n="navPreview">Preview</a>
         <a href="#options" data-i18n="navOptions">Options</a>
         <a href="https://github.com/Sabertlili/signalwall" rel="noreferrer">GitHub</a>
       </nav>
@@ -36,39 +37,53 @@
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="heroEyebrow">SignalWall by Nestcells</p>
         <h1 id="hero-title">SignalWall</h1>
-        <p class="lead" data-i18n="heroLead">A free open-source wallpaper host for Windows screens that should feel intentional.</p>
+        <p class="lead" data-i18n="heroLead">A quiet open-source wallpaper host for Windows screens that should feel intentional.</p>
         <div class="actions">
           <a class="button primary" id="installButton" href="https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md" data-i18n="primaryCta">Install with Codex / Claude</a>
           <a class="button secondary" id="sourceButton" href="https://github.com/Sabertlili/signalwall" rel="noreferrer" data-i18n="sourceCta">View source</a>
         </div>
-        <p class="status" data-i18n="heroStatus">Windows / WebView2 / MIT licensed / Source-first install</p>
-        <p class="install-note" data-i18n="heroNote">The alpha installer is unsigned. The recommended path is to let Codex, Claude Code, or an equivalent inspect the source, build locally, and report security findings before launching.</p>
+        <div class="proof-strip" aria-label="Project facts">
+          <span data-i18n="proofOne">Multi-screen</span>
+          <span data-i18n="proofTwo">Source-first</span>
+          <span data-i18n="proofThree">MIT licensed</span>
+        </div>
+        <p class="install-note" data-i18n="heroNote">Unsigned alpha. The recommended path is source verification, local build, then launch.</p>
       </div>
 
-      <div class="signal-preview" aria-hidden="true">
-        <p id="previewKicker">Signal 01</p>
-        <strong id="previewQuote">Every pixel argues for attention. Most should lose.</strong>
-        <span id="previewAuthor">Design note</span>
-      </div>
+      <aside class="hero-preview" aria-label="SignalWall preview">
+        <div class="preview-chrome">
+          <div>
+            <span class="preview-dot"></span>
+            <span>Quote Signal</span>
+          </div>
+          <span data-i18n="previewBadge">3 displays</span>
+        </div>
+        <div class="preview-wallpaper">
+          <p id="previewKicker">Signal 01</p>
+          <strong id="previewQuote">Every pixel argues for attention. Most should lose.</strong>
+          <span id="previewAuthor">Design note</span>
+          <div class="preview-progress" aria-hidden="true"></div>
+        </div>
+      </aside>
     </section>
 
     <section class="source-install" id="install" aria-labelledby="install-title">
       <div class="section-heading">
         <p class="section-label" data-i18n="installLabel">Safer install</p>
         <h2 id="install-title" data-i18n="installTitle">Install from verified source.</h2>
-        <p data-i18n="installIntro">Instead of asking people to bypass Windows warnings, SignalWall gives them a prompt that asks a local coding agent to inspect the repository, build it, and explain the result first.</p>
+        <p data-i18n="installIntro">SignalWall gives users a prompt for Codex, Claude Code, or an equivalent local agent. The agent inspects the repository, builds locally, and reports findings before anything runs.</p>
       </div>
       <div class="install-panel">
         <article class="prompt-card">
           <p class="mini-label" data-i18n="promptLabel">Codex / Claude prompt</p>
           <h3 data-i18n="promptTitle">Copy one prompt. Build only after checks.</h3>
-          <p data-i18n="promptBody">The prompt verifies the repo origin, reviews app code and scripts, checks release signatures and hashes when relevant, builds from source, and asks before running anything sensitive.</p>
+          <p data-i18n="promptBody">The prompt verifies origin, source, scripts, signatures, hashes, and build output. It also tells the agent not to disable Windows security.</p>
           <a class="text-link" id="promptLink" href="https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md" rel="noreferrer" data-i18n="promptCta">Open prompt</a>
         </article>
         <div class="security-list" aria-label="Security workflow">
           <div>
             <span>01</span>
-            <p data-i18n="checkOne">Clone the official GitHub repository.</p>
+            <p data-i18n="checkOne">Clone the official repository.</p>
           </div>
           <div>
             <span>02</span>
@@ -82,13 +97,13 @@
       </div>
     </section>
 
-    <section class="captures" id="captures" aria-labelledby="captures-title">
+    <section class="captures" id="preview" aria-labelledby="captures-title">
       <div class="section-heading compact">
-        <p class="section-label" data-i18n="capturesLabel">Product captures</p>
-        <h2 id="captures-title" data-i18n="capturesTitle">Wallpaper, controls, and screen workflow.</h2>
+        <p class="section-label" data-i18n="capturesLabel">Product</p>
+        <h2 id="captures-title" data-i18n="capturesTitle">One wallpaper system. One control surface.</h2>
       </div>
       <div class="capture-grid">
-        <figure>
+        <figure class="capture-wide">
           <img src="assets/quote-signal-capture.svg" alt="SignalWall quote wallpaper capture" data-i18n-alt="captureWallpaperAlt">
           <figcaption data-i18n="captureWallpaper">Live quote wallpaper</figcaption>
         </figure>
@@ -106,32 +121,32 @@
     <section class="options" id="options" aria-labelledby="options-title">
       <div class="section-heading">
         <p class="section-label" data-i18n="optionsLabel">Personalization</p>
-        <h2 id="options-title" data-i18n="optionsTitle">Make each screen behave exactly how you want.</h2>
+        <h2 id="options-title" data-i18n="optionsTitle">Precise controls without a heavy interface.</h2>
       </div>
       <div class="option-grid">
         <article>
           <h3 data-i18n="timingTitle">Timing</h3>
-          <p data-i18n="timingBody">Choose fast quote rotation or slow ambient reading, up to five minutes per quote.</p>
+          <p data-i18n="timingBody">Fast rotation or slow ambient reading, up to five minutes per quote.</p>
         </article>
         <article>
           <h3 data-i18n="screenModeTitle">Screen modes</h3>
-          <p data-i18n="screenModeBody">Use the same quote everywhere or a different quote on each monitor.</p>
+          <p data-i18n="screenModeBody">Same quote everywhere or different quotes per monitor.</p>
         </article>
         <article>
           <h3 data-i18n="textThemeTitle">Text themes</h3>
-          <p data-i18n="textThemeBody">Assign Design, Focus, Strategy, or custom phrase groups globally or per screen.</p>
+          <p data-i18n="textThemeBody">Assign Design, Focus, Strategy, or custom phrase groups.</p>
         </article>
         <article>
           <h3 data-i18n="colorThemeTitle">Color themes</h3>
-          <p data-i18n="colorThemeBody">Switch between Signal, Paper Dark, Paper Light, or future custom backgrounds.</p>
+          <p data-i18n="colorThemeBody">Use Signal, Paper Dark, Paper Light, or future custom backgrounds.</p>
         </article>
         <article>
           <h3 data-i18n="motionTitle">Motion</h3>
-          <p data-i18n="motionBody">Control particles, particle speed, grid opacity, progress bar, random order, and transitions.</p>
+          <p data-i18n="motionBody">Particles, speed, grid opacity, progress bar, random order, and transitions.</p>
         </article>
         <article>
           <h3 data-i18n="orderTitle">Screen order</h3>
-          <p data-i18n="orderBody">Map screen 1, 2, and 3 to left, center, or right based on your real desk setup.</p>
+          <p data-i18n="orderBody">Map screen 1, 2, and 3 to match your real desk layout.</p>
         </article>
       </div>
     </section>
