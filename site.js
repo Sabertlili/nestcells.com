@@ -110,14 +110,14 @@ const siteConfig = {
   },
   quotes: {
     en: [
-      ["Every pixel argues for attention. Most should lose.", "Design note"],
-      ["A quiet system beats a loud intention.", "Signal note"],
-      ["Motion should reveal, not perform.", "Animation note"]
+      ["Every pixel should earn its place.", "Design note"],
+      ["Quiet systems guide better.", "Signal note"],
+      ["Motion should reveal intent.", "Animation note"]
     ],
     fr: [
-      ["Chaque pixel demande de l'attention. La plupart devraient perdre.", "Note design"],
-      ["Un systeme calme bat une intention bruyante.", "Note signal"],
-      ["Le mouvement doit reveler, pas performer.", "Note animation"]
+      ["Chaque pixel doit meriter sa place.", "Note design"],
+      ["Un systeme calme guide mieux.", "Note signal"],
+      ["Le mouvement doit reveler l'intention.", "Note animation"]
     ]
   }
 };
