@@ -190,6 +190,15 @@ h1 {
   margin: 18px 0 0;
 }
 
+.install-note {
+  max-width: 520px;
+  margin: 10px 0 0;
+  color: var(--quiet);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 650;
+}
+
 .signal-preview {
   position: absolute;
   right: clamp(20px, 6vw, 96px);
