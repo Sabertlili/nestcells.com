@@ -2,9 +2,10 @@
 
 Static landing page for SignalWall on `nestcells.com`.
 
-The primary call to action points to the AI-assisted source install prompt:
+The primary call to action is language-aware:
 
-`https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.md`
+- English: `https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md`
+- Francais: `https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.fr.md`
 
 The public release binary is still linked as a secondary transparency link because the current alpha installer is unsigned.
 
