@@ -1,18 +1,21 @@
-# nestcells.com
+# Nestcells Site
 
-Minimal static landing page for Nestcells and SignalWall.
+Static landing page for SignalWall on `nestcells.com`.
+
+The primary call to action points to the AI-assisted source install prompt:
+
+`https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.md`
+
+The public release binary is still linked as a secondary transparency link because the current alpha installer is unsigned.
 
 ## Local preview
+
+Open `index.html` directly, or serve the folder:
 
 ```powershell
 python -m http.server 5088
 ```
 
-## Links
+## GitHub Pages
 
-Edit `site.js`:
-
-- `downloadUrl`: SignalWall download or release page
-- `supportUrl`: Buy Me a Coffee or other payment link
-
-When `supportUrl` is empty, the coffee button is visible but disabled.
+This folder includes a `CNAME` file for `nestcells.com`.

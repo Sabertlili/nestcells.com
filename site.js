@@ -1,10 +1,11 @@
 const siteConfig = {
-  downloadUrl: "https://github.com/Sabertlili/signalwall/releases/download/v0.1.0/SignalWallSetup-v0.1.0-win-x64.exe",
-  supportUrl: "",
+  installUrl: "https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.md",
+  sourceUrl: "https://github.com/Sabertlili/signalwall",
   quotes: [
     ["Every pixel argues for attention. Most should lose.", "Design note"],
     ["A quiet system beats a loud intention.", "Signal note"],
-    ["Motion should reveal, not perform.", "Animation note"]
+    ["Motion should reveal, not perform.", "Animation note"],
+    ["Le bon fond d'ecran garde l'intention visible.", "Note produit"]
   ]
 };
 
@@ -13,22 +14,15 @@ const ctx = canvas.getContext("2d");
 const previewKicker = document.getElementById("previewKicker");
 const previewQuote = document.getElementById("previewQuote");
 const previewAuthor = document.getElementById("previewAuthor");
-const downloadButton = document.getElementById("downloadButton");
-const supportButton = document.getElementById("supportButton");
+const installButton = document.getElementById("installButton");
+const sourceButton = document.getElementById("sourceButton");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let particles = [];
 let lastQuote = -1;
 
-downloadButton.href = siteConfig.downloadUrl;
-
-if (siteConfig.supportUrl) {
-  supportButton.href = siteConfig.supportUrl;
-  supportButton.classList.remove("disabled");
-  supportButton.removeAttribute("aria-disabled");
-} else {
-  supportButton.addEventListener("click", (event) => event.preventDefault());
-}
+installButton.href = siteConfig.installUrl;
+sourceButton.href = siteConfig.sourceUrl;
 
 function resize() {
   const scale = window.devicePixelRatio || 1;
@@ -41,7 +35,7 @@ function resize() {
 }
 
 function seed() {
-  const count = reducedMotion ? 18 : Math.max(48, Math.floor((window.innerWidth * window.innerHeight) / 28000));
+  const count = reducedMotion ? 18 : Math.max(52, Math.floor((window.innerWidth * window.innerHeight) / 28000));
   particles = Array.from({ length: count }, () => ({
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
@@ -80,7 +74,7 @@ function draw() {
       const b = particles[j];
       const distance = Math.hypot(a.x - b.x, a.y - b.y);
       if (distance < 128) {
-        ctx.strokeStyle = `rgba(247,241,228,${0.052 * (1 - distance / 128)})`;
+        ctx.strokeStyle = `rgba(248,241,223,${0.052 * (1 - distance / 128)})`;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
