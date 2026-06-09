@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">SignalWall by Nestcells</title>
+  <desc id="desc">Open-source Windows live wallpaper app for calm multi-monitor desktops.</desc>
+  <defs>
+    <linearGradient id="text" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff8ed"/>
+      <stop offset="0.55" stop-color="#e7c174"/>
+      <stop offset="1" stop-color="#98d6c8"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#e7c174"/>
+      <stop offset="0.55" stop-color="#98d6c8"/>
+      <stop offset="1" stop-color="#d8757c"/>
+    </linearGradient>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0v52" fill="none" stroke="#f6efe2" stroke-opacity="0.055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#070806"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="86" cy="92" r="7" fill="#e7c174"/>
+  <circle cx="1028" cy="118" r="5" fill="#98d6c8"/>
+  <circle cx="1038" cy="488" r="6" fill="#d8757c"/>
+  <path d="M92 338h116" stroke="url(#line)" stroke-width="3"/>
+  <text x="92" y="176" fill="#f6efe2" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="1.2">SIGNALWALL BY NESTCELLS</text>
+  <text x="86" y="326" fill="#fff8ed" font-family="Inter, Arial, sans-serif" font-size="128" font-weight="820">SignalWall</text>
+  <text x="92" y="404" fill="#bdb6aa" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="760">Open-source live wallpaper for calm Windows desktops.</text>
+  <g transform="translate(746 174)">
+    <rect width="330" height="268" rx="10" fill="#0b0d0a" stroke="#f6efe2" stroke-opacity="0.18"/>
+    <path d="M30 56h72" stroke="url(#line)" stroke-width="2"/>
+    <text x="116" y="64" fill="#bdb6aa" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">SIGNAL 01</text>
+    <text x="30" y="138" fill="url(#text)" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="820">Every pixel</text>
+    <text x="30" y="194" fill="url(#text)" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="820">should earn</text>
+    <text x="30" y="250" fill="url(#text)" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="820">its place.</text>
+  </g>
+</svg>

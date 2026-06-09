@@ -9,6 +9,7 @@ const siteConfig = {
       metaDescription: "SignalWall by Nestcells is a free, open-source Windows live wallpaper app with an AI-assisted source-first install path.",
       navInstall: "Install",
       navPreview: "Preview",
+      navDemo: "Demo",
       navOptions: "Options",
       heroEyebrow: "SignalWall by Nestcells",
       heroLead: "A quiet, open-source live wallpaper app for calm, intentional Windows desktops.",
@@ -29,6 +30,29 @@ const siteConfig = {
       checkOne: "Clone the official repository.",
       checkTwo: "Inspect source, scripts, workflows, and dependencies.",
       checkThree: "Build locally and report findings before launch.",
+      demoLabel: "Interactive",
+      demoTitle: "Feel the control surface before installing.",
+      demoIntro: "Switch theme, quote mode, tempo, and transition. The real app applies this across your Windows monitors.",
+      demoLeft: "Left display",
+      demoCenter: "Center display",
+      demoRight: "Right display",
+      demoDesign: "Design note",
+      demoFocus: "Focus note",
+      demoMotion: "Motion note",
+      demoThemeLabel: "Color theme",
+      demoThemeSignal: "Signal",
+      demoThemePaper: "Paper",
+      demoThemeNight: "Night",
+      demoModeLabel: "Quote mode",
+      demoModeSame: "Same",
+      demoModeDifferent: "Different",
+      demoTempoLabel: "Tempo",
+      demoTempoFast: "Fast",
+      demoTempoSlow: "Slow",
+      demoTransitionLabel: "Transition",
+      demoTransitionRise: "Rise",
+      demoTransitionSlide: "Slide",
+      demoTransitionGlitch: "Glitch",
       capturesLabel: "Product",
       capturesTitle: "One control center for every wallpaper setting.",
       captureWallpaper: "Live quote wallpaper",
@@ -60,6 +84,7 @@ const siteConfig = {
       metaDescription: "SignalWall par Nestcells est une application gratuite et open source pour des fonds d’écran dynamiques Windows calmes et personnalisables, avec installation assistée depuis la source.",
       navInstall: "Installer",
       navPreview: "Aperçu",
+      navDemo: "Démo",
       navOptions: "Options",
       heroEyebrow: "SignalWall par Nestcells",
       heroLead: "Une application open source discrète pour des bureaux Windows calmes, utiles et intentionnels.",
@@ -80,6 +105,29 @@ const siteConfig = {
       checkOne: "Cloner le dépôt officiel.",
       checkTwo: "Inspecter le code, les scripts, les workflows GitHub Actions et les dépendances.",
       checkThree: "Compiler localement et présenter le rapport avant lancement.",
+      demoLabel: "Interactif",
+      demoTitle: "Testez la surface de contrôle avant l’installation.",
+      demoIntro: "Changez le thème, le mode des citations, le rythme et la transition. L’application réelle applique ces choix sur vos écrans Windows.",
+      demoLeft: "Écran gauche",
+      demoCenter: "Écran central",
+      demoRight: "Écran droit",
+      demoDesign: "Note design",
+      demoFocus: "Note focus",
+      demoMotion: "Note mouvement",
+      demoThemeLabel: "Thème couleur",
+      demoThemeSignal: "Signal",
+      demoThemePaper: "Papier",
+      demoThemeNight: "Nuit",
+      demoModeLabel: "Mode citation",
+      demoModeSame: "Même",
+      demoModeDifferent: "Différent",
+      demoTempoLabel: "Rythme",
+      demoTempoFast: "Rapide",
+      demoTempoSlow: "Lent",
+      demoTransitionLabel: "Transition",
+      demoTransitionRise: "Montée",
+      demoTransitionSlide: "Glissement",
+      demoTransitionGlitch: "Glitch",
       capturesLabel: "Produit",
       capturesTitle: "Un centre de contrôle pour tous les paramètres du fond d’écran.",
       captureWallpaper: "Fond d’écran à citations dynamiques",
@@ -131,12 +179,21 @@ const installButton = document.getElementById("installButton");
 const promptLink = document.getElementById("promptLink");
 const sourceButton = document.getElementById("sourceButton");
 const metaDescription = document.getElementById("metaDescription");
+const demoShell = document.getElementById("demoShell");
+const demoQuoteNodes = [...document.querySelectorAll("[data-demo-quote]")];
+const demoButtons = [...document.querySelectorAll("[data-demo-theme], [data-demo-mode], [data-demo-tempo], [data-demo-transition]")];
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const languageButtons = [...document.querySelectorAll("[data-language]")];
 
 let particles = [];
 let lastQuote = -1;
 let activeLanguage = getInitialLanguage();
+let demoState = {
+  theme: "signal",
+  mode: "different",
+  tempo: "slow",
+  transition: "rise"
+};
 
 sourceButton.href = siteConfig.sourceUrl;
 
@@ -172,6 +229,7 @@ function applyLanguage(language) {
   });
   lastQuote = -1;
   updateQuote(true);
+  updateDemo();
 }
 
 function resize() {
@@ -249,6 +307,37 @@ function updateQuote(force) {
   previewAuthor.textContent = author;
 }
 
+function updateDemo() {
+  if (!demoShell) return;
+
+  demoShell.dataset.theme = demoState.theme;
+  demoShell.dataset.mode = demoState.mode;
+  demoShell.dataset.tempo = demoState.tempo;
+  demoShell.dataset.transition = demoState.transition;
+
+  const quotes = siteConfig.quotes[activeLanguage];
+  demoQuoteNodes.forEach((node, index) => {
+    const quoteIndex = demoState.mode === "same" ? 0 : index % quotes.length;
+    node.textContent = quotes[quoteIndex][0];
+  });
+
+  demoButtons.forEach((button) => {
+    const active =
+      button.dataset.demoTheme === demoState.theme ||
+      button.dataset.demoMode === demoState.mode ||
+      button.dataset.demoTempo === demoState.tempo ||
+      button.dataset.demoTransition === demoState.transition;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  demoShell.querySelectorAll(".demo-screen").forEach((screen) => {
+    screen.classList.remove("is-switching");
+    void screen.offsetWidth;
+    screen.classList.add("is-switching");
+  });
+}
+
 function wrap(value, min, max) {
   if (value < min) return max;
   if (value > max) return min;
@@ -257,6 +346,16 @@ function wrap(value, min, max) {
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.language));
+});
+
+demoButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (button.dataset.demoTheme) demoState.theme = button.dataset.demoTheme;
+    if (button.dataset.demoMode) demoState.mode = button.dataset.demoMode;
+    if (button.dataset.demoTempo) demoState.tempo = button.dataset.demoTempo;
+    if (button.dataset.demoTransition) demoState.transition = button.dataset.demoTransition;
+    updateDemo();
+  });
 });
 
 window.addEventListener("resize", resize);

@@ -4,6 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta id="metaDescription" name="description" content="SignalWall by Nestcells is a free, open-source Windows live wallpaper app with an AI-assisted source-first install path.">
+  <meta property="og:title" content="SignalWall by Nestcells">
+  <meta property="og:description" content="A free, open-source Windows live wallpaper app for calm, intentional multi-monitor desktops.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nestcells.com/">
+  <meta property="og:image" content="https://nestcells.com/assets/social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SignalWall by Nestcells">
+  <meta name="twitter:description" content="A free, open-source Windows live wallpaper app for calm, intentional multi-monitor desktops.">
+  <meta name="twitter:image" content="https://nestcells.com/assets/social-preview.svg">
   <title>Nestcells - SignalWall</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +31,7 @@
       <nav aria-label="Primary">
         <a href="#install" data-i18n="navInstall">Install</a>
         <a href="#preview" data-i18n="navPreview">Preview</a>
+        <a href="#demo" data-i18n="navDemo">Demo</a>
         <a href="#options" data-i18n="navOptions">Options</a>
         <a href="https://github.com/Sabertlili/signalwall" rel="noreferrer">GitHub</a>
       </nav>
@@ -92,6 +102,65 @@
           <div>
             <span>03</span>
             <p data-i18n="checkThree">Build locally and report findings before launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo" id="demo" aria-labelledby="demo-title">
+      <div class="section-heading compact">
+        <p class="section-label" data-i18n="demoLabel">Interactive</p>
+        <h2 id="demo-title" data-i18n="demoTitle">Feel the control surface before installing.</h2>
+        <p data-i18n="demoIntro">Switch theme, quote mode, tempo, and transition. The real app applies this across your Windows monitors.</p>
+      </div>
+      <div class="demo-shell" id="demoShell" data-theme="signal" data-mode="different" data-tempo="slow" data-transition="rise">
+        <div class="demo-wall" aria-label="SignalWall mini demo">
+          <article class="demo-screen">
+            <span data-i18n="demoLeft">Left display</span>
+            <strong data-demo-quote="0">Every pixel should earn its place.</strong>
+            <small data-i18n="demoDesign">Design note</small>
+          </article>
+          <article class="demo-screen featured">
+            <span data-i18n="demoCenter">Center display</span>
+            <strong data-demo-quote="1">Quiet systems guide better.</strong>
+            <small data-i18n="demoFocus">Focus note</small>
+          </article>
+          <article class="demo-screen">
+            <span data-i18n="demoRight">Right display</span>
+            <strong data-demo-quote="2">Motion should reveal intent.</strong>
+            <small data-i18n="demoMotion">Motion note</small>
+          </article>
+        </div>
+        <div class="demo-controls" aria-label="Demo controls">
+          <div class="control-block">
+            <p data-i18n="demoThemeLabel">Color theme</p>
+            <div class="segmented">
+              <button type="button" class="active" data-demo-theme="signal" data-i18n="demoThemeSignal">Signal</button>
+              <button type="button" data-demo-theme="paper" data-i18n="demoThemePaper">Paper</button>
+              <button type="button" data-demo-theme="night" data-i18n="demoThemeNight">Night</button>
+            </div>
+          </div>
+          <div class="control-block">
+            <p data-i18n="demoModeLabel">Quote mode</p>
+            <div class="segmented">
+              <button type="button" data-demo-mode="same" data-i18n="demoModeSame">Same</button>
+              <button type="button" class="active" data-demo-mode="different" data-i18n="demoModeDifferent">Different</button>
+            </div>
+          </div>
+          <div class="control-block">
+            <p data-i18n="demoTempoLabel">Tempo</p>
+            <div class="segmented">
+              <button type="button" data-demo-tempo="fast" data-i18n="demoTempoFast">Fast</button>
+              <button type="button" class="active" data-demo-tempo="slow" data-i18n="demoTempoSlow">Slow</button>
+            </div>
+          </div>
+          <div class="control-block">
+            <p data-i18n="demoTransitionLabel">Transition</p>
+            <div class="segmented">
+              <button type="button" class="active" data-demo-transition="rise" data-i18n="demoTransitionRise">Rise</button>
+              <button type="button" data-demo-transition="slide" data-i18n="demoTransitionSlide">Slide</button>
+              <button type="button" data-demo-transition="glitch" data-i18n="demoTransitionGlitch">Glitch</button>
+            </div>
           </div>
         </div>
       </div>

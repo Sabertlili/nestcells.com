@@ -391,6 +391,7 @@ h3 {
 }
 
 .source-install,
+.demo,
 .captures,
 .options,
 .release {
@@ -467,6 +468,225 @@ h3 {
   color: var(--mint);
   font-size: 13px;
   font-weight: 820;
+}
+
+.demo-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(246, 239, 226, 0.1), transparent 30%),
+    rgba(246, 239, 226, 0.045);
+}
+
+.demo-wall {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  min-height: 360px;
+}
+
+.demo-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(18px, 2.2vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+    #090a08;
+}
+
+.demo-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.demo-screen::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  height: 2px;
+  background: rgba(246, 239, 226, 0.13);
+}
+
+.demo-screen.featured {
+  background:
+    linear-gradient(135deg, rgba(231, 193, 116, 0.14), rgba(152, 214, 200, 0.08)),
+    #090a08;
+}
+
+.demo-screen span,
+.demo-screen small,
+.control-block p {
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.demo-screen strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: auto 0;
+  font-size: clamp(28px, 2.55vw, 42px);
+  line-height: 1.03;
+  font-weight: 820;
+  background: linear-gradient(92deg, #fff8ed, var(--warm), var(--mint));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.demo-controls {
+  display: grid;
+  gap: 12px;
+}
+
+.control-block {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(7, 8, 6, 0.42);
+}
+
+.control-block p {
+  margin: 0;
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.segmented button {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(246, 239, 226, 0.055);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 820;
+  padding: 0 12px;
+}
+
+.segmented button.active {
+  background: var(--paper-strong);
+  color: var(--ink);
+}
+
+.demo-shell[data-theme="paper"] .demo-screen {
+  background: #f3eddf;
+  border-color: rgba(7, 8, 6, 0.15);
+}
+
+.demo-shell[data-theme="paper"] .demo-screen::before {
+  background-image:
+    linear-gradient(rgba(7,8,6,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,8,6,0.048) 1px, transparent 1px);
+}
+
+.demo-shell[data-theme="paper"] .demo-screen span,
+.demo-shell[data-theme="paper"] .demo-screen small {
+  color: rgba(7, 8, 6, 0.55);
+}
+
+.demo-shell[data-theme="paper"] .demo-screen strong {
+  background: linear-gradient(92deg, #14140f, #9c7131, #1b8277);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.demo-shell[data-theme="night"] .demo-screen {
+  background:
+    linear-gradient(135deg, rgba(96, 116, 171, 0.14), rgba(152, 214, 200, 0.05)),
+    #06070b;
+}
+
+.demo-shell[data-theme="night"] .demo-screen strong {
+  background: linear-gradient(92deg, #f6efe2, #9bb7ff, #98d6c8);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.demo-shell[data-tempo="fast"] .demo-screen::after {
+  background: linear-gradient(90deg, var(--warm) 0 72%, rgba(246, 239, 226, 0.13) 72%);
+}
+
+.demo-shell[data-tempo="slow"] .demo-screen::after {
+  background: linear-gradient(90deg, var(--warm) 0 34%, rgba(246, 239, 226, 0.13) 34%);
+}
+
+.demo-screen.is-switching strong {
+  animation: demoRise 420ms ease both;
+}
+
+.demo-shell[data-transition="slide"] .demo-screen.is-switching strong {
+  animation-name: demoSlide;
+}
+
+.demo-shell[data-transition="glitch"] .demo-screen.is-switching strong {
+  animation-name: demoGlitch;
+}
+
+@keyframes demoRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes demoSlide {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes demoGlitch {
+  0% {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  38% {
+    opacity: 1;
+    transform: translateX(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .capture-grid {
@@ -549,6 +769,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .demo-shell {
+    grid-template-columns: 1fr;
+  }
+
   .capture-wide {
     grid-row: auto;
   }
@@ -565,6 +789,7 @@ h3 {
 
 @media (max-width: 760px) {
   .topbar {
+    flex-direction: column;
     align-items: flex-start;
     min-height: auto;
     padding-top: 18px;
@@ -575,9 +800,11 @@ h3 {
     align-items: flex-end;
     flex-direction: column-reverse;
     gap: 12px;
+    width: 100%;
   }
 
   nav {
+    flex-wrap: wrap;
     gap: 12px;
     font-size: 13px;
   }
@@ -600,6 +827,7 @@ h3 {
   }
 
   .source-install,
+  .demo,
   .captures,
   .options,
   .release {
@@ -608,9 +836,19 @@ h3 {
   }
 
   .install-panel,
+  .demo-shell,
+  .demo-wall,
   .capture-grid,
   .option-grid {
     grid-template-columns: 1fr;
+  }
+
+  .demo-wall {
+    min-height: auto;
+  }
+
+  .demo-screen {
+    min-height: 240px;
   }
 
   .preview-wallpaper {

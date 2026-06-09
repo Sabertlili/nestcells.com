@@ -2,6 +2,14 @@
 
 Static landing page for SignalWall on `nestcells.com`.
 
+Includes:
+
+- bilingual EN/FR copy;
+- interactive mini demo;
+- Open Graph / Twitter share metadata;
+- source-first install CTA;
+- responsive screenshots and feature sections.
+
 The primary call to action is language-aware:
 
 - English: `https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md`
