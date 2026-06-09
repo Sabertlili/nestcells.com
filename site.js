@@ -4,6 +4,7 @@ const siteConfig = {
     fr: "https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.fr.md"
   },
   sourceUrl: "https://github.com/Sabertlili/signalwall",
+  productHuntUrl: "https://www.producthunt.com/products/signalwall?launch=signalwall",
   translations: {
     en: {
       metaDescription: "SignalWall by Nestcells is a free, open-source Windows live wallpaper app with an AI-assisted source-first install path.",
@@ -11,10 +12,13 @@ const siteConfig = {
       navPreview: "Preview",
       navDemo: "Demo",
       navOptions: "Options",
+      navLaunch: "Launch",
       heroEyebrow: "SignalWall by Nestcells",
       heroLead: "A quiet, open-source live wallpaper app for calm, intentional Windows desktops.",
       primaryCta: "Install with Codex or Claude",
       sourceCta: "View source",
+      launchStatus: "Product Hunt launch: June 16",
+      launchFollow: "Follow before launch",
       proofOne: "Multi-display",
       proofTwo: "Source-first install",
       proofThree: "MIT licensed",
@@ -86,10 +90,13 @@ const siteConfig = {
       navPreview: "Aperçu",
       navDemo: "Démo",
       navOptions: "Options",
+      navLaunch: "Lancement",
       heroEyebrow: "SignalWall par Nestcells",
       heroLead: "Une application open source discrète pour des bureaux Windows calmes, utiles et intentionnels.",
       primaryCta: "Installer avec Codex ou Claude",
       sourceCta: "Voir le code",
+      launchStatus: "Lancement Product Hunt : 16 juin",
+      launchFollow: "Suivre avant le lancement",
       proofOne: "Multi-écran",
       proofTwo: "Installation source",
       proofThree: "Licence MIT",
@@ -178,6 +185,8 @@ const previewAuthor = document.getElementById("previewAuthor");
 const installButton = document.getElementById("installButton");
 const promptLink = document.getElementById("promptLink");
 const sourceButton = document.getElementById("sourceButton");
+const productHuntButton = document.getElementById("productHuntButton");
+const productHuntNav = document.getElementById("productHuntNav");
 const metaDescription = document.getElementById("metaDescription");
 const demoShell = document.getElementById("demoShell");
 const demoQuoteNodes = [...document.querySelectorAll("[data-demo-quote]")];
@@ -203,6 +212,8 @@ let demoCycleStartedAt = performance.now();
 let demoFrame = 0;
 
 sourceButton.href = siteConfig.sourceUrl;
+productHuntButton.href = siteConfig.productHuntUrl;
+productHuntNav.href = siteConfig.productHuntUrl;
 
 function getInitialLanguage() {
   const stored = localStorage.getItem("signalwall-language");

@@ -244,6 +244,36 @@ h3 {
   color: var(--paper);
 }
 
+.launch-pill {
+  display: inline-grid;
+  gap: 3px;
+  max-width: 100%;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(152, 214, 200, 0.26);
+  border-radius: 8px;
+  background: rgba(152, 214, 200, 0.06);
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.launch-pill:hover {
+  border-color: rgba(152, 214, 200, 0.54);
+  background: rgba(152, 214, 200, 0.1);
+}
+
+.launch-pill span {
+  color: var(--quiet);
+  font-size: 12px;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.launch-pill strong {
+  color: var(--paper-strong);
+  font-size: 15px;
+  font-weight: 820;
+}
+
 .proof-strip {
   flex-wrap: wrap;
   gap: 14px;
@@ -842,6 +872,10 @@ h3 {
   }
 
   .button {
+    width: 100%;
+  }
+
+  .launch-pill {
     width: 100%;
   }
 
