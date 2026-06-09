@@ -471,6 +471,7 @@ h3 {
 }
 
 .demo-shell {
+  --demo-progress: 0%;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   gap: 14px;
@@ -523,7 +524,8 @@ h3 {
   right: 18px;
   bottom: 18px;
   height: 2px;
-  background: rgba(246, 239, 226, 0.13);
+  background:
+    linear-gradient(90deg, var(--warm) 0, var(--mint) var(--demo-progress), rgba(246, 239, 226, 0.13) var(--demo-progress), rgba(246, 239, 226, 0.13) 100%);
 }
 
 .demo-screen.featured {
@@ -633,23 +635,22 @@ h3 {
 }
 
 .demo-shell[data-tempo="fast"] .demo-screen::after {
-  background: linear-gradient(90deg, var(--warm) 0 72%, rgba(246, 239, 226, 0.13) 72%);
-}
-
-.demo-shell[data-tempo="slow"] .demo-screen::after {
-  background: linear-gradient(90deg, var(--warm) 0 34%, rgba(246, 239, 226, 0.13) 34%);
+  height: 3px;
 }
 
 .demo-screen.is-switching strong {
-  animation: demoRise 420ms ease both;
+  animation: demoRise 520ms cubic-bezier(.2, .8, .2, 1) both;
 }
 
 .demo-shell[data-transition="slide"] .demo-screen.is-switching strong {
   animation-name: demoSlide;
+  animation-duration: 620ms;
 }
 
 .demo-shell[data-transition="glitch"] .demo-screen.is-switching strong {
   animation-name: demoGlitch;
+  animation-duration: 720ms;
+  animation-timing-function: steps(2, end);
 }
 
 @keyframes demoRise {
@@ -666,7 +667,11 @@ h3 {
 @keyframes demoSlide {
   from {
     opacity: 0;
-    transform: translateX(18px);
+    transform: translateX(48px);
+  }
+  64% {
+    opacity: 1;
+    transform: translateX(-6px);
   }
   to {
     opacity: 1;
@@ -676,15 +681,29 @@ h3 {
 
 @keyframes demoGlitch {
   0% {
-    opacity: 0;
-    transform: translateX(-8px);
+    opacity: 0.18;
+    clip-path: inset(0 0 68% 0);
+    filter: hue-rotate(110deg) saturate(1.5);
+    transform: translateX(-18px) skewX(-8deg);
   }
-  38% {
+  18% {
     opacity: 1;
+    clip-path: inset(54% 0 18% 0);
+    transform: translateX(14px) skewX(7deg);
+  }
+  36% {
+    clip-path: inset(12% 0 50% 0);
+    transform: translateX(-9px) skewX(-5deg);
+  }
+  58% {
+    clip-path: inset(0 0 0 0);
+    filter: hue-rotate(0deg) saturate(1);
     transform: translateX(6px);
   }
   100% {
     opacity: 1;
+    clip-path: inset(0 0 0 0);
+    filter: none;
     transform: translateX(0);
   }
 }

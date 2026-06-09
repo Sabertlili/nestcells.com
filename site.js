@@ -32,7 +32,7 @@ const siteConfig = {
       checkThree: "Build locally and report findings before launch.",
       demoLabel: "Interactive",
       demoTitle: "Feel the control surface before installing.",
-      demoIntro: "Switch theme, quote mode, tempo, and transition. The real app applies this across your Windows monitors.",
+      demoIntro: "Switch theme, quote mode, tempo, and transition. Tempo now drives the progress bars and quote rotation.",
       demoLeft: "Left display",
       demoCenter: "Center display",
       demoRight: "Right display",
@@ -47,8 +47,8 @@ const siteConfig = {
       demoModeSame: "Same",
       demoModeDifferent: "Different",
       demoTempoLabel: "Tempo",
-      demoTempoFast: "Fast",
-      demoTempoSlow: "Slow",
+      demoTempoFast: "Fast 2s",
+      demoTempoSlow: "Slow 6s",
       demoTransitionLabel: "Transition",
       demoTransitionRise: "Rise",
       demoTransitionSlide: "Slide",
@@ -107,7 +107,7 @@ const siteConfig = {
       checkThree: "Compiler localement et présenter le rapport avant lancement.",
       demoLabel: "Interactif",
       demoTitle: "Testez la surface de contrôle avant l’installation.",
-      demoIntro: "Changez le thème, le mode des citations, le rythme et la transition. L’application réelle applique ces choix sur vos écrans Windows.",
+      demoIntro: "Changez le thème, le mode des citations, le rythme et la transition. Le rythme contrôle maintenant les barres de progression et la rotation des citations.",
       demoLeft: "Écran gauche",
       demoCenter: "Écran central",
       demoRight: "Écran droit",
@@ -122,8 +122,8 @@ const siteConfig = {
       demoModeSame: "Même",
       demoModeDifferent: "Différent",
       demoTempoLabel: "Rythme",
-      demoTempoFast: "Rapide",
-      demoTempoSlow: "Lent",
+      demoTempoFast: "Rapide 2 s",
+      demoTempoSlow: "Lent 6 s",
       demoTransitionLabel: "Transition",
       demoTransitionRise: "Montée",
       demoTransitionSlide: "Glissement",
@@ -194,6 +194,13 @@ let demoState = {
   tempo: "slow",
   transition: "rise"
 };
+const demoDurations = {
+  fast: 1800,
+  slow: 6200
+};
+let demoCycleIndex = 0;
+let demoCycleStartedAt = performance.now();
+let demoFrame = 0;
 
 sourceButton.href = siteConfig.sourceUrl;
 
@@ -229,7 +236,7 @@ function applyLanguage(language) {
   });
   lastQuote = -1;
   updateQuote(true);
-  updateDemo();
+  updateDemo(false);
 }
 
 function resize() {
@@ -307,7 +314,7 @@ function updateQuote(force) {
   previewAuthor.textContent = author;
 }
 
-function updateDemo() {
+function updateDemo(animate = true) {
   if (!demoShell) return;
 
   demoShell.dataset.theme = demoState.theme;
@@ -315,11 +322,7 @@ function updateDemo() {
   demoShell.dataset.tempo = demoState.tempo;
   demoShell.dataset.transition = demoState.transition;
 
-  const quotes = siteConfig.quotes[activeLanguage];
-  demoQuoteNodes.forEach((node, index) => {
-    const quoteIndex = demoState.mode === "same" ? 0 : index % quotes.length;
-    node.textContent = quotes[quoteIndex][0];
-  });
+  renderDemoQuotes(animate);
 
   demoButtons.forEach((button) => {
     const active =
@@ -330,12 +333,55 @@ function updateDemo() {
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
   });
+}
+
+function renderDemoQuotes(animate = true) {
+  const quotes = siteConfig.quotes[activeLanguage];
+  demoQuoteNodes.forEach((node, index) => {
+    const quoteIndex = demoState.mode === "same"
+      ? demoCycleIndex % quotes.length
+      : (demoCycleIndex + index) % quotes.length;
+    node.textContent = quotes[quoteIndex][0];
+  });
+
+  if (!animate) return;
 
   demoShell.querySelectorAll(".demo-screen").forEach((screen) => {
     screen.classList.remove("is-switching");
     void screen.offsetWidth;
     screen.classList.add("is-switching");
   });
+}
+
+function resetDemoCycle(resetIndex = false) {
+  if (!demoShell) return;
+  if (resetIndex) demoCycleIndex = 0;
+  demoCycleStartedAt = performance.now();
+  demoShell.style.setProperty("--demo-progress", "0%");
+}
+
+function animateDemo(now = performance.now()) {
+  if (demoShell) {
+    const duration = demoDurations[demoState.tempo] || demoDurations.slow;
+    const elapsed = Math.max(0, now - demoCycleStartedAt);
+    const progress = Math.min(1, elapsed / duration);
+    demoShell.style.setProperty("--demo-progress", `${(progress * 100).toFixed(2)}%`);
+
+    if (progress >= 1) {
+      demoCycleIndex += 1;
+      demoCycleStartedAt = now;
+      demoShell.style.setProperty("--demo-progress", "0%");
+      renderDemoQuotes(true);
+    }
+  }
+
+  demoFrame = requestAnimationFrame(animateDemo);
+}
+
+function startDemoClock() {
+  if (!demoShell || demoFrame) return;
+  demoCycleStartedAt = performance.now();
+  demoFrame = requestAnimationFrame(animateDemo);
 }
 
 function wrap(value, min, max) {
@@ -350,10 +396,17 @@ languageButtons.forEach((button) => {
 
 demoButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    const previousMode = demoState.mode;
+    const previousTempo = demoState.tempo;
     if (button.dataset.demoTheme) demoState.theme = button.dataset.demoTheme;
     if (button.dataset.demoMode) demoState.mode = button.dataset.demoMode;
     if (button.dataset.demoTempo) demoState.tempo = button.dataset.demoTempo;
     if (button.dataset.demoTransition) demoState.transition = button.dataset.demoTransition;
+
+    if (previousTempo !== demoState.tempo || previousMode !== demoState.mode) {
+      resetDemoCycle(previousMode !== demoState.mode);
+    }
+
     updateDemo();
   });
 });
@@ -361,4 +414,5 @@ demoButtons.forEach((button) => {
 window.addEventListener("resize", resize);
 applyLanguage(activeLanguage);
 resize();
+startDemoClock();
 draw();
