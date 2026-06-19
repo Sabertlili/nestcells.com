@@ -7,7 +7,7 @@ Includes:
 - bilingual EN/FR copy;
 - interactive mini demo;
 - Open Graph / Twitter share metadata;
-- source-first install CTA;
+- agent-verifiable source install CTA;
 - responsive screenshots and feature sections.
 
 The primary call to action is language-aware:
