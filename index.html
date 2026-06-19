@@ -10,16 +10,18 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nestcells.com/">
   <meta property="og:image" content="https://nestcells.com/assets/social-preview.png">
+  <meta property="og:locale" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SignalWall by Nestcells">
   <meta name="twitter:description" content="Calm, configurable live wallpapers for Windows multi-monitor desktops.">
   <meta name="twitter:image" content="https://nestcells.com/assets/social-preview.png">
   <title>SignalWall - Live wallpapers that respect your attention</title>
+  <link rel="canonical" href="https://nestcells.com/">
   <link rel="icon" type="image/png" href="assets/signalwall-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;760;820&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260619-wow">
+  <link rel="stylesheet" href="styles.css?v=20260619-v03">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -27,6 +29,7 @@
       "name": "SignalWall",
       "applicationCategory": "DesktopEnhancementApplication",
       "operatingSystem": "Windows 10, Windows 11",
+      "softwareVersion": "0.3.0",
       "isAccessibleForFree": true,
       "license": "https://opensource.org/license/mit",
       "url": "https://nestcells.com/",
@@ -47,6 +50,7 @@
     <nav aria-label="Primary navigation">
       <a href="#demo" data-i18n="navDemo">Live demo</a>
       <a href="#control" data-i18n="navControl">Control center</a>
+      <a href="#trust" data-i18n="navTrust">Trust</a>
       <a href="#install" data-i18n="navInstall">Install</a>
       <a href="https://github.com/Sabertlili/signalwall?utm_source=nestcells&utm_medium=website" rel="noreferrer">GitHub</a>
     </nav>
@@ -71,13 +75,13 @@
         <p class="hero-lead" data-i18n="heroLead">Live wallpapers that respect your attention.</p>
         <p class="hero-body" data-i18n="heroBody">Quiet typography, subtle motion, and a built-in control center for every screen on your desk.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#demo" data-i18n="heroPrimary">Try the live demo</a>
-          <a class="button secondary" id="installButton" href="https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md" data-i18n="heroSecondary">Build from source</a>
+          <a class="button primary" href="#install" data-i18n="heroPrimary">Get SignalWall</a>
+          <a class="button secondary" href="#demo" data-i18n="heroSecondary">Try the live demo</a>
         </div>
         <div class="trust-line" aria-label="Project facts">
           <span data-i18n="trustOne">No telemetry</span>
           <span data-i18n="trustTwo">MIT licensed</span>
-          <span data-i18n="trustThree">Three-screen aware</span>
+          <span data-i18n="trustThree">Attested releases</span>
         </div>
       </div>
 
@@ -160,14 +164,14 @@
 
     <section class="control-section" id="control" aria-labelledby="control-title">
       <div class="control-copy">
-        <p class="section-label" data-i18n="controlLabel">New in v0.2</p>
+        <p class="section-label" data-i18n="controlLabel">New in v0.3</p>
         <h2 id="control-title" data-i18n="controlTitle">The control center now lives inside SignalWall.</h2>
-        <p data-i18n="controlBody">Open it from the tray. Reorder screens, change timing, tune motion, create text themes, and apply everything to every monitor at once.</p>
+        <p data-i18n="controlBody">Open it from the tray. Reorder screens, tune motion, create themes, and import or export complete presets from one place.</p>
         <ul>
           <li data-i18n="controlPointOne">Global or per-screen quote and color themes</li>
           <li data-i18n="controlPointTwo">Five seconds to five minutes per quote</li>
           <li data-i18n="controlPointThree">Light and dark control-center themes</li>
-          <li data-i18n="controlPointFour">One phrase per line for fast quote-pack creation</li>
+          <li data-i18n="controlPointFour">Shareable preset files for complete setups</li>
         </ul>
       </div>
       <figure class="control-visual">
@@ -205,6 +209,43 @@
       </div>
     </section>
 
+    <section class="trust-section" id="trust" aria-labelledby="trust-title">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="trustLabel">Proof, not promises</p>
+        <h2 id="trust-title" data-i18n="trustTitle">Every release leaves a verifiable trail.</h2>
+        <p data-i18n="trustIntro">SignalWall publishes the evidence needed to inspect what was built, where it came from, and whether a download changed in transit.</p>
+      </div>
+      <div class="proof-grid">
+        <a href="https://github.com/Sabertlili/signalwall/attestations" rel="noreferrer">
+          <span>01</span>
+          <strong data-i18n="proofOneTitle">Signed provenance</strong>
+          <small data-i18n="proofOneBody">GitHub and Sigstore bind each binary to its public workflow and commit.</small>
+        </a>
+        <a href="https://github.com/Sabertlili/signalwall/releases/latest" rel="noreferrer">
+          <span>02</span>
+          <strong data-i18n="proofTwoTitle">SPDX SBOM</strong>
+          <small data-i18n="proofTwoBody">Every release includes a machine-readable software bill of materials.</small>
+        </a>
+        <a href="https://github.com/Sabertlili/signalwall/actions/workflows/ci.yml" rel="noreferrer">
+          <span>03</span>
+          <strong data-i18n="proofThreeTitle">Tests and CodeQL</strong>
+          <small data-i18n="proofThreeBody">Configuration, monitor mapping, builds, and static analysis run in public.</small>
+        </a>
+        <a href="https://github.com/Sabertlili/signalwall/blob/main/docs/release-verification.md" rel="noreferrer">
+          <span>04</span>
+          <strong data-i18n="proofFourTitle">Local verification</strong>
+          <small data-i18n="proofFourBody">Check hashes and provenance yourself without disabling Windows security.</small>
+        </a>
+      </div>
+      <div class="verify-command">
+        <div>
+          <span data-i18n="verifyLabel">Verify a downloaded artifact</span>
+          <code id="verifyCommand">gh attestation verify SignalWallPortable-v0.3.0-win-x64.zip -R Sabertlili/signalwall</code>
+        </div>
+        <button class="copy-button" id="copyVerifyBtn" type="button" data-i18n="copyVerify">Copy command</button>
+      </div>
+    </section>
+
     <section class="install-section" id="install" aria-labelledby="install-title">
       <div class="section-heading">
         <p class="section-label" data-i18n="installLabel">Install with eyes open</p>
@@ -225,9 +266,12 @@
           <div>
             <span data-i18n="releaseLabel">For compatible systems</span>
             <h3 data-i18n="releaseTitle">GitHub release</h3>
-            <p data-i18n="releaseBody">Installer, portable package, and SHA-256 checksums. Public binaries remain unsigned until the signing application is approved.</p>
+            <p data-i18n="releaseBody">Portable package, installer, checksums, SBOM, release manifest, and signed build provenance. Windows binaries remain unsigned.</p>
           </div>
-          <a class="button secondary" href="https://github.com/Sabertlili/signalwall/releases?utm_source=nestcells&utm_medium=website" rel="noreferrer" data-i18n="releaseCta">View releases</a>
+          <div class="path-actions">
+            <a class="button primary" id="portableDownloadButton" href="https://github.com/Sabertlili/signalwall/releases/download/v0.3.0/SignalWallPortable-v0.3.0-win-x64.zip" rel="noreferrer" data-i18n="downloadCta">Download portable v0.3</a>
+            <a class="text-link" href="https://github.com/Sabertlili/signalwall/releases/latest?utm_source=nestcells&utm_medium=website" rel="noreferrer" data-i18n="releaseCta">All release files</a>
+          </div>
         </article>
         <article class="install-path">
           <div>
@@ -263,6 +307,6 @@
     </div>
   </footer>
 
-  <script src="site.js?v=20260619-wow"></script>
+  <script src="site.js?v=20260619-v03"></script>
 </body>
 </html>

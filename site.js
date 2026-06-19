@@ -3,21 +3,25 @@ const siteConfig = {
     en: "https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md",
     fr: "https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.fr.md"
   },
+  releaseUrls: {
+    portable: "https://github.com/Sabertlili/signalwall/releases/download/v0.3.0/SignalWallPortable-v0.3.0-win-x64.zip"
+  },
   translations: {
     en: {
       metaDescription: "SignalWall is a free, open-source Windows live wallpaper app with a built-in multi-monitor control center.",
       pageTitle: "SignalWall - Live wallpapers that respect your attention",
       navDemo: "Live demo",
       navControl: "Control center",
+      navTrust: "Trust",
       navInstall: "Install",
       heroEyebrow: "Open source · Windows · Multi-monitor",
       heroLead: "Live wallpapers that respect your attention.",
       heroBody: "Quiet typography, subtle motion, and a built-in control center for every screen on your desk.",
-      heroPrimary: "Try the live demo",
-      heroSecondary: "Build from source",
+      heroPrimary: "Get SignalWall",
+      heroSecondary: "Try the live demo",
       trustOne: "No telemetry",
       trustTwo: "MIT licensed",
-      trustThree: "Three-screen aware",
+      trustThree: "Attested releases",
       scrollLabel: "See it move",
       stripOne: "One control center",
       stripTwo: "Independent screens",
@@ -44,13 +48,13 @@ const siteConfig = {
       transitionLabel: "Transition",
       riseTransition: "Rise",
       slideTransition: "Slide",
-      controlLabel: "New in v0.2",
+      controlLabel: "New in v0.3",
       controlTitle: "The control center now lives inside SignalWall.",
-      controlBody: "Open it from the tray. Reorder screens, change timing, tune motion, create text themes, and apply everything to every monitor at once.",
+      controlBody: "Open it from the tray. Reorder screens, tune motion, create themes, and import or export complete presets from one place.",
       controlPointOne: "Global or per-screen quote and color themes",
       controlPointTwo: "Five seconds to five minutes per quote",
       controlPointThree: "Light and dark control-center themes",
-      controlPointFour: "One phrase per line for fast quote-pack creation",
+      controlPointFour: "Shareable preset files for complete setups",
       controlAlt: "SignalWall control center with settings and three screen columns",
       controlCaption: "Everything in one place. No Lively dependency.",
       featuresLabel: "Built for daily use",
@@ -63,6 +67,20 @@ const siteConfig = {
       featureThreeBody: "No hidden telemetry. Inspect the C#, HTML, CSS, JavaScript, and release workflow.",
       featureFourTitle: "Motion with restraint",
       featureFourBody: "Particles, grid, progress, and transitions are adjustable or removable.",
+      trustLabel: "Proof, not promises",
+      trustTitle: "Every release leaves a verifiable trail.",
+      trustIntro: "SignalWall publishes the evidence needed to inspect what was built, where it came from, and whether a download changed in transit.",
+      proofOneTitle: "Signed provenance",
+      proofOneBody: "GitHub and Sigstore bind each binary to its public workflow and commit.",
+      proofTwoTitle: "SPDX SBOM",
+      proofTwoBody: "Every release includes a machine-readable software bill of materials.",
+      proofThreeTitle: "Tests and CodeQL",
+      proofThreeBody: "Configuration, monitor mapping, builds, and static analysis run in public.",
+      proofFourTitle: "Local verification",
+      proofFourBody: "Check hashes and provenance yourself without disabling Windows security.",
+      verifyLabel: "Verify a downloaded artifact",
+      copyVerify: "Copy command",
+      copyDone: "Copied",
       installLabel: "Install with eyes open",
       installTitle: "Open source first. Signed release next.",
       installIntro: "Windows Smart App Control blocks unsigned desktop apps on strict systems. We do not ask you to disable it. Use the verified source workflow today while we pursue free open-source signing through SignPath Foundation.",
@@ -72,8 +90,9 @@ const siteConfig = {
       sourceInstallCta: "Open verified prompt",
       releaseLabel: "For compatible systems",
       releaseTitle: "GitHub release",
-      releaseBody: "Installer, portable package, and SHA-256 checksums. Public binaries remain unsigned until the signing application is approved.",
-      releaseCta: "View releases",
+      releaseBody: "Portable package, installer, checksums, SBOM, release manifest, and signed build provenance. Windows binaries remain unsigned.",
+      downloadCta: "Download portable v0.3",
+      releaseCta: "All release files",
       inspectLabel: "For developers",
       inspectTitle: "Inspect everything",
       inspectBody: "Read the architecture, security policy, roadmap, CI, CodeQL, and release scripts.",
@@ -90,15 +109,16 @@ const siteConfig = {
       pageTitle: "SignalWall - Des fonds d’écran qui respectent votre attention",
       navDemo: "Démo",
       navControl: "Centre de contrôle",
+      navTrust: "Confiance",
       navInstall: "Installer",
       heroEyebrow: "Open source · Windows · Multi-écran",
       heroLead: "Des fonds d’écran qui respectent votre attention.",
       heroBody: "Une typographie calme, un mouvement subtil et un centre de contrôle intégré pour chaque écran de votre bureau.",
-      heroPrimary: "Essayer la démo",
-      heroSecondary: "Compiler depuis la source",
+      heroPrimary: "Obtenir SignalWall",
+      heroSecondary: "Essayer la démo",
       trustOne: "Aucune télémétrie",
       trustTwo: "Licence MIT",
-      trustThree: "Conçu pour trois écrans",
+      trustThree: "Releases attestées",
       scrollLabel: "Voir le mouvement",
       stripOne: "Un seul centre de contrôle",
       stripTwo: "Écrans indépendants",
@@ -125,13 +145,13 @@ const siteConfig = {
       transitionLabel: "Transition",
       riseTransition: "Montée",
       slideTransition: "Glissement",
-      controlLabel: "Nouveau dans v0.2",
+      controlLabel: "Nouveau dans v0.3",
       controlTitle: "Le centre de contrôle vit maintenant dans SignalWall.",
-      controlBody: "Ouvrez-le depuis la barre système. Réorganisez les écrans, ajustez le rythme et le mouvement, créez des thèmes et appliquez tout aux moniteurs en une fois.",
+      controlBody: "Ouvrez-le depuis la barre système. Réorganisez les écrans, ajustez le mouvement, créez des thèmes et importez ou exportez des presets complets depuis un seul endroit.",
       controlPointOne: "Thèmes de citations et de couleurs globaux ou par écran",
       controlPointTwo: "De cinq secondes à cinq minutes par citation",
       controlPointThree: "Centre de contrôle en thème clair ou sombre",
-      controlPointFour: "Une phrase par ligne pour créer rapidement un pack",
+      controlPointFour: "Fichiers de preset partageables pour une configuration complète",
       controlAlt: "Centre de contrôle SignalWall avec paramètres et trois colonnes d’écran",
       controlCaption: "Tout au même endroit. Aucune dépendance à Lively.",
       featuresLabel: "Conçu pour le quotidien",
@@ -144,6 +164,20 @@ const siteConfig = {
       featureThreeBody: "Aucune télémétrie cachée. Inspectez le C#, le HTML, le CSS, le JavaScript et le workflow de release.",
       featureFourTitle: "Du mouvement avec retenue",
       featureFourBody: "Les particules, la grille, la progression et les transitions sont réglables ou désactivables.",
+      trustLabel: "Des preuves, pas des promesses",
+      trustTitle: "Chaque release laisse une trace vérifiable.",
+      trustIntro: "SignalWall publie les éléments nécessaires pour inspecter ce qui a été compilé, son origine et l’intégrité du téléchargement.",
+      proofOneTitle: "Provenance signée",
+      proofOneBody: "GitHub et Sigstore relient chaque binaire à son workflow public et à son commit.",
+      proofTwoTitle: "SBOM SPDX",
+      proofTwoBody: "Chaque release inclut une nomenclature logicielle lisible par machine.",
+      proofThreeTitle: "Tests et CodeQL",
+      proofThreeBody: "La configuration, le mapping des écrans, les builds et l’analyse statique sont publics.",
+      proofFourTitle: "Vérification locale",
+      proofFourBody: "Vérifiez les empreintes et la provenance sans désactiver la sécurité Windows.",
+      verifyLabel: "Vérifier un artefact téléchargé",
+      copyVerify: "Copier la commande",
+      copyDone: "Copié",
       installLabel: "Installer en toute connaissance",
       installTitle: "Open source aujourd’hui. Version signée ensuite.",
       installIntro: "Windows Smart App Control bloque les applications non signées sur les systèmes stricts. Nous ne demandons pas de le désactiver. Utilisez le parcours source vérifié pendant que nous poursuivons une signature open source gratuite auprès de SignPath Foundation.",
@@ -153,8 +187,9 @@ const siteConfig = {
       sourceInstallCta: "Ouvrir le prompt vérifié",
       releaseLabel: "Pour les systèmes compatibles",
       releaseTitle: "Version GitHub",
-      releaseBody: "Installateur, package portable et empreintes SHA-256. Les binaires restent non signés jusqu’à l’approbation de la demande de signature.",
-      releaseCta: "Voir les versions",
+      releaseBody: "Package portable, installateur, empreintes, SBOM, manifeste et provenance de build signée. Les binaires Windows restent non signés.",
+      downloadCta: "Télécharger la version portable v0.3",
+      releaseCta: "Tous les fichiers",
       inspectLabel: "Pour les développeurs",
       inspectTitle: "Tout inspecter",
       inspectBody: "Consultez l’architecture, la politique de sécurité, la feuille de route, la CI, CodeQL et les scripts de release.",
@@ -199,9 +234,11 @@ const demoTool = document.getElementById("demoTool");
 const demoQuoteNodes = [...document.querySelectorAll("[data-demo-quote]")];
 const demoButtons = [...document.querySelectorAll("[data-demo-theme], [data-demo-mode], [data-demo-tempo], [data-demo-transition]")];
 const languageButtons = [...document.querySelectorAll("[data-language]")];
-const installButton = document.getElementById("installButton");
 const sourceInstallButton = document.getElementById("sourceInstallButton");
+const portableDownloadButton = document.getElementById("portableDownloadButton");
 const metaDescription = document.getElementById("metaDescription");
+const copyVerifyButton = document.getElementById("copyVerifyBtn");
+const verifyCommand = document.getElementById("verifyCommand");
 
 let activeLanguage = getInitialLanguage();
 let particles = [];
@@ -243,8 +280,8 @@ function applyLanguage(language) {
 
   document.title = dictionary.pageTitle;
   metaDescription.setAttribute("content", dictionary.metaDescription);
-  installButton.href = siteConfig.installUrls[language];
   sourceInstallButton.href = siteConfig.installUrls[language];
+  portableDownloadButton.href = siteConfig.releaseUrls.portable;
 
   languageButtons.forEach((button) => {
     const active = button.dataset.language === language;
@@ -418,6 +455,27 @@ demoButtons.forEach((button) => {
     updateDemoButtons();
     renderDemoQuotes(true);
   });
+});
+
+copyVerifyButton.addEventListener("click", async () => {
+  const command = verifyCommand.textContent.trim();
+  try {
+    await navigator.clipboard.writeText(command);
+  } catch {
+    const fallback = document.createElement("textarea");
+    fallback.value = command;
+    fallback.setAttribute("readonly", "");
+    fallback.style.position = "fixed";
+    fallback.style.opacity = "0";
+    document.body.appendChild(fallback);
+    fallback.select();
+    document.execCommand("copy");
+    fallback.remove();
+  }
+  copyVerifyButton.textContent = siteConfig.translations[activeLanguage].copyDone;
+  window.setTimeout(() => {
+    copyVerifyButton.textContent = siteConfig.translations[activeLanguage].copyVerify;
+  }, 3500);
 });
 
 window.addEventListener("resize", resizeCanvas);

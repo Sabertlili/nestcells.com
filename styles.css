@@ -431,6 +431,7 @@ h3 {
 .demo-section,
 .control-section,
 .feature-band,
+.trust-section,
 .install-section,
 .closing-section {
   width: min(1240px, calc(100vw - 48px));
@@ -787,6 +788,103 @@ h3 {
   line-height: 1.5;
 }
 
+.trust-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.proof-grid a {
+  display: grid;
+  min-width: 0;
+  min-height: 230px;
+  align-content: space-between;
+  gap: 18px;
+  padding: 25px 22px 24px 0;
+  transition: background 180ms ease;
+}
+
+.proof-grid a + a {
+  padding-left: 22px;
+  border-left: 1px solid var(--line);
+}
+
+.proof-grid a:hover {
+  background: rgba(255, 248, 237, 0.025);
+}
+
+.proof-grid span {
+  color: var(--mint);
+  font-size: 11px;
+  font-weight: 820;
+}
+
+.proof-grid strong {
+  align-self: end;
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.proof-grid small {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.verify-command {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: rgba(255, 248, 237, 0.035);
+}
+
+.verify-command > div {
+  min-width: 0;
+}
+
+.verify-command span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--quiet);
+  font-size: 10px;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.verify-command code {
+  display: block;
+  overflow: hidden;
+  color: var(--paper);
+  font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy-button {
+  min-height: 40px;
+  border: 1px solid var(--paper);
+  border-radius: 7px;
+  padding: 0 15px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 820;
+}
+
 .install-section {
   padding-bottom: 72px;
 }
@@ -829,6 +927,14 @@ h3 {
   font-size: 14px;
   font-weight: 650;
   line-height: 1.5;
+}
+
+.path-actions {
+  display: flex;
+  max-width: none;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
 }
 
 .closing-section {
@@ -944,6 +1050,7 @@ footer > div:last-child {
   .demo-section,
   .control-section,
   .feature-band,
+  .trust-section,
   .install-section,
   .closing-section,
   footer {
@@ -1005,6 +1112,7 @@ footer > div:last-child {
   .demo-section,
   .control-section,
   .feature-band,
+  .trust-section,
   .install-section,
   .closing-section {
     padding: 80px 0;
@@ -1025,6 +1133,20 @@ footer > div:last-child {
 
   .feature-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .proof-grid a:nth-child(3) {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .proof-grid a:nth-child(4) {
+    border-top: 1px solid var(--line);
   }
 
   .feature-list article:nth-child(3) {
@@ -1128,7 +1250,8 @@ footer > div:last-child {
   }
 
   .control-dock,
-  .feature-list {
+  .feature-list,
+  .proof-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1146,6 +1269,33 @@ footer > div:last-child {
     border-top: 0;
   }
 
+  .proof-grid a,
+  .proof-grid a + a,
+  .proof-grid a:nth-child(3),
+  .proof-grid a:nth-child(4) {
+    min-height: 180px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .proof-grid a:first-child {
+    border-top: 0;
+  }
+
+  .verify-command {
+    grid-template-columns: 1fr;
+  }
+
+  .verify-command code {
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  .copy-button {
+    width: 100%;
+  }
+
   .feature-list span {
     margin-bottom: 24px;
   }
@@ -1153,6 +1303,11 @@ footer > div:last-child {
   .install-path {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .path-actions {
+    display: grid;
+    justify-content: stretch;
   }
 }
 
