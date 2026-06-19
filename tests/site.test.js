@@ -27,6 +27,7 @@ assert.match(html, /softwareVersion": "0\.3\.0"/);
 assert.match(html, /SignalWallPortable-v0\.3\.0-win-x64\.zip/);
 assert.match(script, /SignalWallPortable-v0\.3\.0-win-x64\.zip/);
 assert.ok(fs.existsSync(".well-known/security.txt"));
+assert.ok(fs.existsSync(".nojekyll"));
 assert.ok(fs.existsSync("robots.txt"));
 assert.ok(fs.existsSync("sitemap.xml"));
 
