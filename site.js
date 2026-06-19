@@ -3,217 +3,221 @@ const siteConfig = {
     en: "https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md",
     fr: "https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.fr.md"
   },
-  sourceUrl: "https://github.com/Sabertlili/signalwall",
-  productHuntUrl: "https://www.producthunt.com/products/signalwall?launch=signalwall",
   translations: {
     en: {
-      metaDescription: "SignalWall by Nestcells is a free, open-source Windows live wallpaper app with an AI-assisted source-first install path.",
+      metaDescription: "SignalWall is a free, open-source Windows live wallpaper app with a built-in multi-monitor control center.",
+      pageTitle: "SignalWall - Live wallpapers that respect your attention",
+      navDemo: "Live demo",
+      navControl: "Control center",
       navInstall: "Install",
-      navPreview: "Preview",
-      navDemo: "Demo",
-      navOptions: "Options",
-      navLaunch: "Launch",
-      heroEyebrow: "SignalWall by Nestcells",
-      heroLead: "A quiet, open-source live wallpaper app for calm, intentional Windows desktops.",
-      primaryCta: "Install with Codex or Claude",
-      sourceCta: "View source",
-      launchStatus: "Product Hunt launch: June 16",
-      launchFollow: "Follow before launch",
-      proofOne: "Multi-display",
-      proofTwo: "Source-first install",
-      proofThree: "MIT licensed",
-      heroNote: "Unsigned alpha. Recommended path: inspect the code, build locally, then launch.",
-      previewBadge: "3 displays",
-      installLabel: "Source-first install",
-      installTitle: "Install after reviewing the source.",
-      installIntro: "Use the prompt to have Codex, Claude Code, or another local agent inspect the repository, build locally, and report findings before anything runs.",
-      promptLabel: "Codex or Claude prompt",
-      promptTitle: "Copy the prompt, review the code, then build.",
-      promptBody: "It verifies the repository origin, source code, scripts, signatures, hashes, and build output. It also instructs the agent not to disable Windows security.",
-      promptCta: "Open prompt",
-      checkOne: "Clone the official repository.",
-      checkTwo: "Inspect source, scripts, workflows, and dependencies.",
-      checkThree: "Build locally and report findings before launch.",
-      demoLabel: "Interactive",
-      demoTitle: "Feel the control surface before installing.",
-      demoIntro: "Switch theme, quote mode, tempo, and transition. Tempo now drives the progress bars and quote rotation.",
-      demoLeft: "Left display",
-      demoCenter: "Center display",
-      demoRight: "Right display",
-      demoDesign: "Design note",
-      demoFocus: "Focus note",
-      demoMotion: "Motion note",
-      demoThemeLabel: "Color theme",
-      demoThemeSignal: "Signal",
-      demoThemePaper: "Paper",
-      demoThemeNight: "Night",
-      demoModeLabel: "Quote mode",
-      demoModeSame: "Same",
-      demoModeDifferent: "Different",
-      demoTempoLabel: "Tempo",
-      demoTempoFast: "Fast 2s",
-      demoTempoSlow: "Slow 6s",
-      demoTransitionLabel: "Transition",
-      demoTransitionRise: "Rise",
-      demoTransitionSlide: "Slide",
-      demoTransitionGlitch: "Glitch",
-      capturesLabel: "Product",
-      capturesTitle: "One control center for every wallpaper setting.",
-      captureWallpaper: "Live quote wallpaper",
-      captureControls: "Single control center",
-      captureScreens: "Screen order and modes",
-      captureWallpaperAlt: "SignalWall quote wallpaper capture",
-      captureControlsAlt: "SignalWall customization workflow",
-      captureScreensAlt: "SignalWall multi-screen layout modes",
-      optionsLabel: "Personalization",
-      optionsTitle: "Fine-grained controls without a heavy UI.",
-      timingTitle: "Timing",
-      timingBody: "Choose quick rotation or slow ambient reading, up to five minutes per quote.",
-      screenModeTitle: "Screen modes",
-      screenModeBody: "Same quote everywhere or different quotes per monitor.",
-      textThemeTitle: "Text themes",
-      textThemeBody: "Assign Design, Focus, Strategy, or custom phrase groups.",
-      colorThemeTitle: "Color themes",
-      colorThemeBody: "Use Signal, Paper Dark, Paper Light, or custom backgrounds as the library grows.",
-      motionTitle: "Motion",
-      motionBody: "Tune particles, speed, grid opacity, progress, random order, and transitions.",
-      orderTitle: "Screen order",
-      orderBody: "Map screen 1, 2, and 3 to match your real desk layout.",
-      releaseLabel: "Release status",
-      releaseTitle: "Free, open source, unsigned alpha.",
-      releaseBody: "The release binary remains available for transparency, but reviewing the source and building locally is the recommended route until a signed installer exists.",
-      releaseCta: "Open GitHub release"
+      heroEyebrow: "Open source · Windows · Multi-monitor",
+      heroLead: "Live wallpapers that respect your attention.",
+      heroBody: "Quiet typography, subtle motion, and a built-in control center for every screen on your desk.",
+      heroPrimary: "Try the live demo",
+      heroSecondary: "Build from source",
+      trustOne: "No telemetry",
+      trustTwo: "MIT licensed",
+      trustThree: "Three-screen aware",
+      scrollLabel: "See it move",
+      stripOne: "One control center",
+      stripTwo: "Independent screens",
+      stripThree: "Custom quote packs",
+      stripFour: "Five transition styles",
+      demoLabel: "Live product demo",
+      demoTitle: "Three displays. One system.",
+      demoIntro: "Change the mode, color, tempo, and transition. This is the same wallpaper engine bundled with SignalWall.",
+      leftDisplay: "Left display",
+      centerDisplay: "Center display",
+      rightDisplay: "Right display",
+      designNote: "Design note",
+      focusNote: "Focus note",
+      systemsNote: "Systems note",
+      themeLabel: "Theme",
+      paperTheme: "Paper",
+      nightTheme: "Night",
+      quotesLabel: "Quotes",
+      sameMode: "Same",
+      differentMode: "Different",
+      tempoLabel: "Tempo",
+      fastTempo: "Fast",
+      slowTempo: "Slow",
+      transitionLabel: "Transition",
+      riseTransition: "Rise",
+      slideTransition: "Slide",
+      controlLabel: "New in v0.2",
+      controlTitle: "The control center now lives inside SignalWall.",
+      controlBody: "Open it from the tray. Reorder screens, change timing, tune motion, create text themes, and apply everything to every monitor at once.",
+      controlPointOne: "Global or per-screen quote and color themes",
+      controlPointTwo: "Five seconds to five minutes per quote",
+      controlPointThree: "Light and dark control-center themes",
+      controlPointFour: "One phrase per line for fast quote-pack creation",
+      controlAlt: "SignalWall control center with settings and three screen columns",
+      controlCaption: "Everything in one place. No Lively dependency.",
+      featuresLabel: "Built for daily use",
+      featuresTitle: "Calm is a feature.",
+      featureOneTitle: "Screen-aware",
+      featureOneBody: "Map physical left, center, and right displays instead of accepting arbitrary monitor numbers.",
+      featureTwoTitle: "Actually personal",
+      featureTwoBody: "Create your own themes and paste a full quote pack with one phrase per line.",
+      featureThreeTitle: "Source visible",
+      featureThreeBody: "No hidden telemetry. Inspect the C#, HTML, CSS, JavaScript, and release workflow.",
+      featureFourTitle: "Motion with restraint",
+      featureFourBody: "Particles, grid, progress, and transitions are adjustable or removable.",
+      installLabel: "Install with eyes open",
+      installTitle: "Open source first. Signed release next.",
+      installIntro: "Windows Smart App Control blocks unsigned desktop apps on strict systems. We do not ask you to disable it. Use the verified source workflow today while we pursue free open-source signing through SignPath Foundation.",
+      recommendedLabel: "Recommended now",
+      sourceInstallTitle: "AI-assisted source install",
+      sourceInstallBody: "Let Codex or Claude inspect the repository, build it locally, and report security findings before launch.",
+      sourceInstallCta: "Open verified prompt",
+      releaseLabel: "For compatible systems",
+      releaseTitle: "GitHub release",
+      releaseBody: "Installer, portable package, and SHA-256 checksums. Public binaries remain unsigned until the signing application is approved.",
+      releaseCta: "View releases",
+      inspectLabel: "For developers",
+      inspectTitle: "Inspect everything",
+      inspectBody: "Read the architecture, security policy, roadmap, CI, CodeQL, and release scripts.",
+      inspectCta: "Browse source",
+      closingLabel: "Signal over noise",
+      closingTitle: "Your desktop is already asking for attention. SignalWall asks less.",
+      closingPrimary: "Play with the demo",
+      productHuntCta: "See the Product Hunt launch",
+      footerCopy: "Free, open source, and intentionally quiet.",
+      footerSecurity: "Security"
     },
     fr: {
-      metaDescription: "SignalWall par Nestcells est une application gratuite et open source pour des fonds d’écran dynamiques Windows calmes et personnalisables, avec installation assistée depuis la source.",
-      navInstall: "Installer",
-      navPreview: "Aperçu",
+      metaDescription: "SignalWall est une application Windows gratuite et open source de fonds d’écran dynamiques avec un centre de contrôle multi-écran intégré.",
+      pageTitle: "SignalWall - Des fonds d’écran qui respectent votre attention",
       navDemo: "Démo",
-      navOptions: "Options",
-      navLaunch: "Lancement",
-      heroEyebrow: "SignalWall par Nestcells",
-      heroLead: "Une application open source discrète pour des bureaux Windows calmes, utiles et intentionnels.",
-      primaryCta: "Installer avec Codex ou Claude",
-      sourceCta: "Voir le code",
-      launchStatus: "Lancement Product Hunt : 16 juin",
-      launchFollow: "Suivre avant le lancement",
-      proofOne: "Multi-écran",
-      proofTwo: "Installation source",
-      proofThree: "Licence MIT",
-      heroNote: "Alpha non signée. Chemin recommandé : vérifier le code, compiler localement, puis lancer.",
-      previewBadge: "3 écrans",
-      installLabel: "Installation depuis la source",
-      installTitle: "Installer après revue du code source.",
-      installIntro: "Utilisez le prompt pour demander à Codex, Claude Code ou un autre agent local d’inspecter le dépôt, de compiler localement, puis de présenter ses conclusions avant toute exécution.",
-      promptLabel: "Instruction Codex ou Claude",
-      promptTitle: "Copiez le prompt, vérifiez le code, puis compilez.",
-      promptBody: "Il vérifie l’origine du dépôt, le code source, les scripts, les signatures, les empreintes et le résultat du build. Il précise aussi de ne pas désactiver la sécurité Windows.",
-      promptCta: "Ouvrir le prompt",
-      checkOne: "Cloner le dépôt officiel.",
-      checkTwo: "Inspecter le code, les scripts, les workflows GitHub Actions et les dépendances.",
-      checkThree: "Compiler localement et présenter le rapport avant lancement.",
-      demoLabel: "Interactif",
-      demoTitle: "Testez la surface de contrôle avant l’installation.",
-      demoIntro: "Changez le thème, le mode des citations, le rythme et la transition. Le rythme contrôle maintenant les barres de progression et la rotation des citations.",
-      demoLeft: "Écran gauche",
-      demoCenter: "Écran central",
-      demoRight: "Écran droit",
-      demoDesign: "Note design",
-      demoFocus: "Note focus",
-      demoMotion: "Note mouvement",
-      demoThemeLabel: "Thème couleur",
-      demoThemeSignal: "Signal",
-      demoThemePaper: "Papier",
-      demoThemeNight: "Nuit",
-      demoModeLabel: "Mode citation",
-      demoModeSame: "Même",
-      demoModeDifferent: "Différent",
-      demoTempoLabel: "Rythme",
-      demoTempoFast: "Rapide 2 s",
-      demoTempoSlow: "Lent 6 s",
-      demoTransitionLabel: "Transition",
-      demoTransitionRise: "Montée",
-      demoTransitionSlide: "Glissement",
-      demoTransitionGlitch: "Glitch",
-      capturesLabel: "Produit",
-      capturesTitle: "Un centre de contrôle pour tous les paramètres du fond d’écran.",
-      captureWallpaper: "Fond d’écran à citations dynamiques",
-      captureControls: "Centre de contrôle unique",
-      captureScreens: "Ordre des écrans et modes",
-      captureWallpaperAlt: "Capture du fond d’écran SignalWall",
-      captureControlsAlt: "Flux de personnalisation SignalWall",
-      captureScreensAlt: "Modes multi-écrans SignalWall",
-      optionsLabel: "Personnalisation",
-      optionsTitle: "Des contrôles précis, sans interface lourde.",
-      timingTitle: "Durée",
-      timingBody: "Choisissez une rotation rapide ou une lecture lente, jusqu’à cinq minutes par citation.",
-      screenModeTitle: "Modes d’écran",
-      screenModeBody: "Affichez la même citation partout ou une citation différente par moniteur.",
-      textThemeTitle: "Thèmes texte",
-      textThemeBody: "Assignez Design, Focus, Strategy ou vos propres groupes de phrases.",
-      colorThemeTitle: "Thèmes couleur",
-      colorThemeBody: "Utilisez Signal, Paper Dark, Paper Light ou des arrière-plans personnalisés à mesure que la bibliothèque évolue.",
-      motionTitle: "Mouvement",
-      motionBody: "Ajustez les particules, la vitesse, l’opacité de la grille, la progression, l’aléatoire et les transitions.",
-      orderTitle: "Ordre des écrans",
-      orderBody: "Associez les écrans 1, 2 et 3 à votre disposition physique.",
-      releaseLabel: "Statut de version",
-      releaseTitle: "Gratuit, open source, alpha non signée.",
-      releaseBody: "Le binaire publié reste disponible par transparence, mais la revue du code source et la compilation locale restent le chemin recommandé jusqu’à l’arrivée d’un installateur signé.",
-      releaseCta: "Ouvrir la version GitHub"
+      navControl: "Centre de contrôle",
+      navInstall: "Installer",
+      heroEyebrow: "Open source · Windows · Multi-écran",
+      heroLead: "Des fonds d’écran qui respectent votre attention.",
+      heroBody: "Une typographie calme, un mouvement subtil et un centre de contrôle intégré pour chaque écran de votre bureau.",
+      heroPrimary: "Essayer la démo",
+      heroSecondary: "Compiler depuis la source",
+      trustOne: "Aucune télémétrie",
+      trustTwo: "Licence MIT",
+      trustThree: "Conçu pour trois écrans",
+      scrollLabel: "Voir le mouvement",
+      stripOne: "Un seul centre de contrôle",
+      stripTwo: "Écrans indépendants",
+      stripThree: "Packs de citations",
+      stripFour: "Cinq transitions",
+      demoLabel: "Démo interactive",
+      demoTitle: "Trois écrans. Un seul système.",
+      demoIntro: "Changez le mode, la couleur, le rythme et la transition. C’est le même moteur de fond d’écran que celui intégré à SignalWall.",
+      leftDisplay: "Écran gauche",
+      centerDisplay: "Écran central",
+      rightDisplay: "Écran droit",
+      designNote: "Note design",
+      focusNote: "Note focus",
+      systemsNote: "Note système",
+      themeLabel: "Thème",
+      paperTheme: "Papier",
+      nightTheme: "Nuit",
+      quotesLabel: "Citations",
+      sameMode: "Même",
+      differentMode: "Différentes",
+      tempoLabel: "Rythme",
+      fastTempo: "Rapide",
+      slowTempo: "Lent",
+      transitionLabel: "Transition",
+      riseTransition: "Montée",
+      slideTransition: "Glissement",
+      controlLabel: "Nouveau dans v0.2",
+      controlTitle: "Le centre de contrôle vit maintenant dans SignalWall.",
+      controlBody: "Ouvrez-le depuis la barre système. Réorganisez les écrans, ajustez le rythme et le mouvement, créez des thèmes et appliquez tout aux moniteurs en une fois.",
+      controlPointOne: "Thèmes de citations et de couleurs globaux ou par écran",
+      controlPointTwo: "De cinq secondes à cinq minutes par citation",
+      controlPointThree: "Centre de contrôle en thème clair ou sombre",
+      controlPointFour: "Une phrase par ligne pour créer rapidement un pack",
+      controlAlt: "Centre de contrôle SignalWall avec paramètres et trois colonnes d’écran",
+      controlCaption: "Tout au même endroit. Aucune dépendance à Lively.",
+      featuresLabel: "Conçu pour le quotidien",
+      featuresTitle: "Le calme est une fonctionnalité.",
+      featureOneTitle: "Conscient des écrans",
+      featureOneBody: "Associez les écrans physiques gauche, central et droit au lieu d’accepter une numérotation arbitraire.",
+      featureTwoTitle: "Vraiment personnel",
+      featureTwoBody: "Créez vos thèmes et collez un pack complet avec une phrase par ligne.",
+      featureThreeTitle: "Source visible",
+      featureThreeBody: "Aucune télémétrie cachée. Inspectez le C#, le HTML, le CSS, le JavaScript et le workflow de release.",
+      featureFourTitle: "Du mouvement avec retenue",
+      featureFourBody: "Les particules, la grille, la progression et les transitions sont réglables ou désactivables.",
+      installLabel: "Installer en toute connaissance",
+      installTitle: "Open source aujourd’hui. Version signée ensuite.",
+      installIntro: "Windows Smart App Control bloque les applications non signées sur les systèmes stricts. Nous ne demandons pas de le désactiver. Utilisez le parcours source vérifié pendant que nous poursuivons une signature open source gratuite auprès de SignPath Foundation.",
+      recommendedLabel: "Recommandé maintenant",
+      sourceInstallTitle: "Installation source assistée par IA",
+      sourceInstallBody: "Demandez à Codex ou Claude d’inspecter le dépôt, de compiler localement et de présenter ses conclusions de sécurité avant le lancement.",
+      sourceInstallCta: "Ouvrir le prompt vérifié",
+      releaseLabel: "Pour les systèmes compatibles",
+      releaseTitle: "Version GitHub",
+      releaseBody: "Installateur, package portable et empreintes SHA-256. Les binaires restent non signés jusqu’à l’approbation de la demande de signature.",
+      releaseCta: "Voir les versions",
+      inspectLabel: "Pour les développeurs",
+      inspectTitle: "Tout inspecter",
+      inspectBody: "Consultez l’architecture, la politique de sécurité, la feuille de route, la CI, CodeQL et les scripts de release.",
+      inspectCta: "Parcourir le code",
+      closingLabel: "Le signal plutôt que le bruit",
+      closingTitle: "Votre bureau demande déjà votre attention. SignalWall en demande moins.",
+      closingPrimary: "Jouer avec la démo",
+      productHuntCta: "Voir le lancement Product Hunt",
+      footerCopy: "Gratuit, open source et volontairement calme.",
+      footerSecurity: "Sécurité"
     }
   },
   quotes: {
     en: [
-      ["Every pixel should earn its place.", "Design note"],
-      ["Quiet systems guide better.", "Signal note"],
-      ["Motion should reveal intent.", "Animation note"]
+      ["Every pixel argues for attention. Most should lose.", "Design note"],
+      ["Attention is the budget. Spend it on meaning.", "Focus note"],
+      ["Good systems make the next action obvious.", "Systems note"],
+      ["Motion should reveal, not perform.", "Animation note"],
+      ["Clarity is a design decision.", "Working principle"],
+      ["Do fewer things with more consequence.", "Operating rule"]
     ],
     fr: [
-      ["Chaque pixel doit mériter sa place.", "Note design"],
-      ["Un système calme guide mieux.", "Note signal"],
-      ["Le mouvement doit révéler l’intention.", "Note animation"]
+      ["Chaque pixel réclame de l’attention. La plupart devraient perdre.", "Note design"],
+      ["L’attention est le budget. Dépensez-la sur ce qui compte.", "Note focus"],
+      ["Un bon système rend la prochaine action évidente.", "Note système"],
+      ["Le mouvement doit révéler, pas se mettre en scène.", "Note animation"],
+      ["La clarté est une décision de design.", "Principe de travail"],
+      ["Faites moins de choses, avec plus de conséquences.", "Règle d’action"]
     ]
   }
 };
 
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const canvas = document.getElementById("ambient");
-const ctx = canvas.getContext("2d");
-const previewKicker = document.getElementById("previewKicker");
-const previewQuote = document.getElementById("previewQuote");
-const previewAuthor = document.getElementById("previewAuthor");
-const installButton = document.getElementById("installButton");
-const promptLink = document.getElementById("promptLink");
-const sourceButton = document.getElementById("sourceButton");
-const productHuntButton = document.getElementById("productHuntButton");
-const productHuntNav = document.getElementById("productHuntNav");
-const metaDescription = document.getElementById("metaDescription");
-const demoShell = document.getElementById("demoShell");
+const context = canvas.getContext("2d");
+const heroSignal = document.querySelector(".hero-signal");
+const heroSignalLabel = document.getElementById("heroSignalLabel");
+const heroSignalQuote = document.getElementById("heroSignalQuote");
+const heroSignalAuthor = document.getElementById("heroSignalAuthor");
+const heroProgress = document.getElementById("heroProgress");
+const demoTool = document.getElementById("demoTool");
 const demoQuoteNodes = [...document.querySelectorAll("[data-demo-quote]")];
 const demoButtons = [...document.querySelectorAll("[data-demo-theme], [data-demo-mode], [data-demo-tempo], [data-demo-transition]")];
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const languageButtons = [...document.querySelectorAll("[data-language]")];
+const installButton = document.getElementById("installButton");
+const sourceInstallButton = document.getElementById("sourceInstallButton");
+const metaDescription = document.getElementById("metaDescription");
 
-let particles = [];
-let lastQuote = -1;
 let activeLanguage = getInitialLanguage();
-let demoState = {
+let particles = [];
+let heroIndex = -1;
+let heroCycleStartedAt = performance.now();
+let demoCycleIndex = 0;
+let demoCycleStartedAt = performance.now();
+let animationFrame = 0;
+const heroDuration = 7800;
+const demoDurations = { fast: 2400, slow: 7000 };
+const demoState = {
   theme: "signal",
   mode: "different",
   tempo: "slow",
   transition: "rise"
 };
-const demoDurations = {
-  fast: 1800,
-  slow: 6200
-};
-let demoCycleIndex = 0;
-let demoCycleStartedAt = performance.now();
-let demoFrame = 0;
-
-sourceButton.href = siteConfig.sourceUrl;
-productHuntButton.href = siteConfig.productHuntUrl;
-productHuntNav.href = siteConfig.productHuntUrl;
 
 function getInitialLanguage() {
   const stored = localStorage.getItem("signalwall-language");
@@ -228,112 +232,131 @@ function applyLanguage(language) {
   const dictionary = siteConfig.translations[language];
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
-    const key = node.getAttribute("data-i18n");
-    if (dictionary[key]) node.textContent = dictionary[key];
+    const value = dictionary[node.dataset.i18n];
+    if (value) node.textContent = value;
   });
 
   document.querySelectorAll("[data-i18n-alt]").forEach((node) => {
-    const key = node.getAttribute("data-i18n-alt");
-    if (dictionary[key]) node.setAttribute("alt", dictionary[key]);
+    const value = dictionary[node.dataset.i18nAlt];
+    if (value) node.setAttribute("alt", value);
   });
 
+  document.title = dictionary.pageTitle;
   metaDescription.setAttribute("content", dictionary.metaDescription);
   installButton.href = siteConfig.installUrls[language];
-  promptLink.href = siteConfig.installUrls[language];
+  sourceInstallButton.href = siteConfig.installUrls[language];
+
   languageButtons.forEach((button) => {
-    const isActive = button.dataset.language === language;
-    button.classList.toggle("active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
+    const active = button.dataset.language === language;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
   });
-  lastQuote = -1;
-  updateQuote(true);
-  updateDemo(false);
+
+  heroIndex = -1;
+  heroCycleStartedAt = performance.now();
+  demoCycleIndex = 0;
+  demoCycleStartedAt = performance.now();
+  updateHeroQuote(true);
+  renderDemoQuotes(false);
 }
 
-function resize() {
+function resizeCanvas() {
   const scale = window.devicePixelRatio || 1;
   canvas.width = Math.floor(window.innerWidth * scale);
   canvas.height = Math.floor(window.innerHeight * scale);
   canvas.style.width = `${window.innerWidth}px`;
   canvas.style.height = `${window.innerHeight}px`;
-  ctx.setTransform(scale, 0, 0, scale, 0, 0);
-  seed();
+  context.setTransform(scale, 0, 0, scale, 0, 0);
+  seedParticles();
 }
 
-function seed() {
-  const count = reducedMotion ? 18 : Math.max(52, Math.floor((window.innerWidth * window.innerHeight) / 28000));
+function seedParticles() {
+  const count = reducedMotion
+    ? 20
+    : Math.max(42, Math.floor((window.innerWidth * window.innerHeight) / 30000));
   particles = Array.from({ length: count }, () => ({
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
-    vx: (Math.random() - 0.5) * 0.24,
-    vy: (Math.random() - 0.5) * 0.18,
-    color: Math.floor(Math.random() * 3),
-    size: 1 + Math.random() * 2.2
+    vx: (Math.random() - 0.5) * 0.22,
+    vy: (Math.random() - 0.5) * 0.16,
+    size: 1 + Math.random() * 2,
+    color: Math.floor(Math.random() * 3)
   }));
 }
 
-function draw() {
-  ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-  ctx.fillStyle = "#070806";
-  ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+function drawAmbient() {
+  context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+  const colors = [[231, 193, 116], [152, 214, 200], [216, 117, 124]];
 
-  const colors = [
-    [232, 197, 126],
-    [155, 213, 199],
-    [216, 117, 124]
-  ];
-
-  for (const particle of particles) {
+  particles.forEach((particle) => {
     if (!reducedMotion) {
       particle.x = wrap(particle.x + particle.vx, -20, window.innerWidth + 20);
       particle.y = wrap(particle.y + particle.vy, -20, window.innerHeight + 20);
     }
-
     const color = colors[particle.color];
-    ctx.fillStyle = `rgba(${color[0]},${color[1]},${color[2]},0.34)`;
-    ctx.fillRect(particle.x, particle.y, particle.size, particle.size);
-  }
+    context.fillStyle = `rgba(${color[0]},${color[1]},${color[2]},0.32)`;
+    context.fillRect(particle.x, particle.y, particle.size, particle.size);
+  });
 
   for (let i = 0; i < particles.length; i += 1) {
     for (let j = i + 1; j < particles.length; j += 1) {
-      const a = particles[i];
-      const b = particles[j];
-      const distance = Math.hypot(a.x - b.x, a.y - b.y);
-      if (distance < 128) {
-        ctx.strokeStyle = `rgba(248,241,223,${0.052 * (1 - distance / 128)})`;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
+      const first = particles[i];
+      const second = particles[j];
+      const distance = Math.hypot(first.x - second.x, first.y - second.y);
+      if (distance < 118) {
+        context.strokeStyle = `rgba(255,248,237,${0.05 * (1 - distance / 118)})`;
+        context.beginPath();
+        context.moveTo(first.x, first.y);
+        context.lineTo(second.x, second.y);
+        context.stroke();
       }
     }
   }
-
-  updateQuote(false);
-  requestAnimationFrame(draw);
 }
 
-function updateQuote(force) {
+function updateHeroQuote(force = false, now = performance.now()) {
   const quotes = siteConfig.quotes[activeLanguage];
-  const index = Math.floor(Date.now() / 5200) % quotes.length;
-  if (!force && index === lastQuote) return;
-  lastQuote = index;
+  const elapsed = Math.max(0, now - heroCycleStartedAt);
+  const index = Math.floor(elapsed / heroDuration) % quotes.length;
+  const progress = (elapsed % heroDuration) / heroDuration;
+  heroProgress.style.transform = `scaleX(${progress})`;
 
+  if (!force && index === heroIndex) return;
+  heroIndex = index;
   const [quote, author] = quotes[index];
-  previewKicker.textContent = `Signal ${String(index + 1).padStart(2, "0")}`;
-  previewQuote.textContent = quote;
-  previewAuthor.textContent = author;
+  heroSignalLabel.textContent = `Signal ${String(index + 1).padStart(2, "0")}`;
+  heroSignalQuote.textContent = quote;
+  heroSignalAuthor.textContent = author;
+
+  if (!reducedMotion) {
+    heroSignal.classList.remove("is-changing");
+    void heroSignal.offsetWidth;
+    heroSignal.classList.add("is-changing");
+  }
 }
 
-function updateDemo(animate = true) {
-  if (!demoShell) return;
+function renderDemoQuotes(animate = true) {
+  const quotes = siteConfig.quotes[activeLanguage];
+  demoQuoteNodes.forEach((node, index) => {
+    const quoteIndex = demoState.mode === "same"
+      ? demoCycleIndex % quotes.length
+      : (demoCycleIndex + index) % quotes.length;
+    node.textContent = quotes[quoteIndex][0];
+  });
 
-  demoShell.dataset.theme = demoState.theme;
-  demoShell.dataset.mode = demoState.mode;
-  demoShell.dataset.tempo = demoState.tempo;
-  demoShell.dataset.transition = demoState.transition;
+  if (!animate || reducedMotion) return;
+  demoTool.querySelectorAll(".monitor").forEach((monitor) => {
+    monitor.classList.remove("is-switching");
+    void monitor.offsetWidth;
+    monitor.classList.add("is-switching");
+  });
+}
 
-  renderDemoQuotes(animate);
+function updateDemoButtons() {
+  demoTool.dataset.theme = demoState.theme;
+  demoTool.dataset.mode = demoState.mode;
+  demoTool.dataset.tempo = demoState.tempo;
+  demoTool.dataset.transition = demoState.transition;
 
   demoButtons.forEach((button) => {
     const active =
@@ -346,53 +369,30 @@ function updateDemo(animate = true) {
   });
 }
 
-function renderDemoQuotes(animate = true) {
-  const quotes = siteConfig.quotes[activeLanguage];
-  demoQuoteNodes.forEach((node, index) => {
-    const quoteIndex = demoState.mode === "same"
-      ? demoCycleIndex % quotes.length
-      : (demoCycleIndex + index) % quotes.length;
-    node.textContent = quotes[quoteIndex][0];
-  });
+function updateDemoClock(now) {
+  const duration = demoDurations[demoState.tempo];
+  const progress = Math.min(1, Math.max(0, now - demoCycleStartedAt) / duration);
+  demoTool.style.setProperty("--demo-progress", `${(progress * 100).toFixed(2)}%`);
 
-  if (!animate) return;
-
-  demoShell.querySelectorAll(".demo-screen").forEach((screen) => {
-    screen.classList.remove("is-switching");
-    void screen.offsetWidth;
-    screen.classList.add("is-switching");
-  });
-}
-
-function resetDemoCycle(resetIndex = false) {
-  if (!demoShell) return;
-  if (resetIndex) demoCycleIndex = 0;
-  demoCycleStartedAt = performance.now();
-  demoShell.style.setProperty("--demo-progress", "0%");
-}
-
-function animateDemo(now = performance.now()) {
-  if (demoShell) {
-    const duration = demoDurations[demoState.tempo] || demoDurations.slow;
-    const elapsed = Math.max(0, now - demoCycleStartedAt);
-    const progress = Math.min(1, elapsed / duration);
-    demoShell.style.setProperty("--demo-progress", `${(progress * 100).toFixed(2)}%`);
-
-    if (progress >= 1) {
-      demoCycleIndex += 1;
-      demoCycleStartedAt = now;
-      demoShell.style.setProperty("--demo-progress", "0%");
-      renderDemoQuotes(true);
-    }
+  if (progress >= 1) {
+    demoCycleIndex += 1;
+    demoCycleStartedAt = now;
+    demoTool.style.setProperty("--demo-progress", "0%");
+    renderDemoQuotes(true);
   }
-
-  demoFrame = requestAnimationFrame(animateDemo);
 }
 
-function startDemoClock() {
-  if (!demoShell || demoFrame) return;
+function animate(now) {
+  drawAmbient();
+  updateHeroQuote(false, now);
+  updateDemoClock(now);
+  animationFrame = requestAnimationFrame(animate);
+}
+
+function resetDemoCycle(resetQuotes = false) {
+  if (resetQuotes) demoCycleIndex = 0;
   demoCycleStartedAt = performance.now();
-  demoFrame = requestAnimationFrame(animateDemo);
+  demoTool.style.setProperty("--demo-progress", "0%");
 }
 
 function wrap(value, min, max) {
@@ -414,16 +414,16 @@ demoButtons.forEach((button) => {
     if (button.dataset.demoTempo) demoState.tempo = button.dataset.demoTempo;
     if (button.dataset.demoTransition) demoState.transition = button.dataset.demoTransition;
 
-    if (previousTempo !== demoState.tempo || previousMode !== demoState.mode) {
-      resetDemoCycle(previousMode !== demoState.mode);
-    }
-
-    updateDemo();
+    resetDemoCycle(previousMode !== demoState.mode || previousTempo !== demoState.tempo);
+    updateDemoButtons();
+    renderDemoQuotes(true);
   });
 });
 
-window.addEventListener("resize", resize);
+window.addEventListener("resize", resizeCanvas);
+window.addEventListener("pagehide", () => cancelAnimationFrame(animationFrame));
+
 applyLanguage(activeLanguage);
-resize();
-startDemoClock();
-draw();
+updateDemoButtons();
+resizeCanvas();
+animationFrame = requestAnimationFrame(animate);
