@@ -8,6 +8,7 @@ Releases: https://github.com/Sabertlili/signalwall/releases
 Security policy: https://github.com/Sabertlili/signalwall/blob/main/SECURITY.md
 AI-assisted install guide: https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md
 Kickstarter: https://www.kickstarter.com/projects/nestcells/1070361330
+GoFundMe: https://www.gofundme.com/f/help-saber-launch-nestcells-and-build-opensource-tools
 Product Hunt: https://www.producthunt.com/products/signalwall?launch=signalwall
 LinkedIn: https://www.linkedin.com/company/nestcells-studio/
 Facebook: https://www.facebook.com/profile.php?id=61590995022574
@@ -48,6 +49,10 @@ SignalWall is best described as:
 - a multi-monitor quote wallpaper,
 - a calm desktop customization tool,
 - a source-first indie software project by Nestcells.
+
+## Funding focus
+
+The current public funding focus is Kickstarter and GoFundMe. Kickstarter supports campaign rewards, supporter tiers, and SignalWall development milestones. GoFundMe supports the broader Nestcells runway for safer releases, code signing, documentation, compatibility work, and future practical tools. GitHub remains the source of truth for code, releases, security documentation, and technical verification.
 
 ## Language notes
 

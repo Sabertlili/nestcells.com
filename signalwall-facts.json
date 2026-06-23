@@ -18,7 +18,9 @@
   "linkedin": "https://www.linkedin.com/company/nestcells-studio/",
   "facebook": "https://www.facebook.com/profile.php?id=61590995022574",
   "kickstarter": "https://www.kickstarter.com/projects/nestcells/1070361330",
+  "gofundme": "https://www.gofundme.com/f/help-saber-launch-nestcells-and-build-opensource-tools",
   "product_hunt": "https://www.producthunt.com/products/signalwall?launch=signalwall",
+  "funding_focus": "Kickstarter and GoFundMe are the current public support links. GitHub remains the technical source of truth for code, security notes, and releases.",
   "features": [
     "Typography-first live wallpaper",
     "Independent per-screen quote themes",
