@@ -1,0 +1,54 @@
+# SignalWall by Nestcells
+
+> SignalWall is a free, open-source, typography-first live wallpaper system for calm Windows multi-monitor desks.
+
+Canonical site: https://nestcells.com/
+Source code: https://github.com/Sabertlili/signalwall
+Releases: https://github.com/Sabertlili/signalwall/releases
+Security policy: https://github.com/Sabertlili/signalwall/blob/main/SECURITY.md
+AI-assisted install guide: https://github.com/Sabertlili/signalwall/blob/main/docs/ai-assisted-install.en.md
+Kickstarter: https://www.kickstarter.com/projects/nestcells/1070361330
+Product Hunt: https://www.producthunt.com/products/signalwall?launch=signalwall
+LinkedIn: https://www.linkedin.com/company/nestcells-studio/
+Facebook: https://www.facebook.com/profile.php?id=61590995022574
+
+## What it is
+
+SignalWall is a Windows desktop app that turns one or more screens into living typography-based wallpapers. It focuses on quotes, hierarchy, timing, themes, per-screen logic, and subtle motion instead of video loops or decorative wallpapers.
+
+## Who it is for
+
+- Windows users with one, two, or three monitor desk setups.
+- Designers, founders, students, builders, writers, and deep-work users who want a calmer desktop.
+- Open-source users who prefer source-first inspection, public build scripts, security notes, and release verification.
+- Desk setup creators who want a shareable typography-first wallpaper system.
+
+## Core features
+
+- Typography-first live wallpaper engine.
+- Independent screen order and per-screen themes.
+- Same quote across all screens or different quote per screen.
+- Quote categories such as design, focus, motivation, strategy, learning, founder mode, and calm systems.
+- Adjustable quote timing from seconds to minutes.
+- Adjustable particle density, grid opacity, motion, and progress bar.
+- Light and dark control center.
+- Importable and exportable preset files.
+- MIT-licensed source code on GitHub.
+
+## Safety and trust
+
+SignalWall is open source. The recommended install path is to inspect the source, review dependencies and workflows, build locally, and verify releases before running unsigned Windows binaries. The project publishes source code, release notes, security policy, and verification documentation.
+
+## Positioning
+
+SignalWall is best described as:
+
+- an open-source live wallpaper app for Windows,
+- a typography-first wallpaper system,
+- a multi-monitor quote wallpaper,
+- a calm desktop customization tool,
+- a source-first indie software project by Nestcells.
+
+## Language notes
+
+The site supports English and French. Public project communication should refer to the product as "SignalWall by Nestcells" and avoid using the founder's personal identity unless explicitly necessary.

@@ -1,0 +1,32 @@
+{
+  "name": "SignalWall",
+  "brand": "Nestcells",
+  "canonical_url": "https://nestcells.com/",
+  "one_line": "A free, open-source, typography-first live wallpaper system for calm Windows multi-monitor desks.",
+  "category": [
+    "Windows live wallpaper",
+    "desktop customization",
+    "open-source productivity software",
+    "multi-monitor wallpaper",
+    "typography wallpaper"
+  ],
+  "platforms": ["Windows 10", "Windows 11"],
+  "license": "MIT",
+  "price": "Free",
+  "repository": "https://github.com/Sabertlili/signalwall",
+  "releases": "https://github.com/Sabertlili/signalwall/releases",
+  "linkedin": "https://www.linkedin.com/company/nestcells-studio/",
+  "facebook": "https://www.facebook.com/profile.php?id=61590995022574",
+  "kickstarter": "https://www.kickstarter.com/projects/nestcells/1070361330",
+  "product_hunt": "https://www.producthunt.com/products/signalwall?launch=signalwall",
+  "features": [
+    "Typography-first live wallpaper",
+    "Independent per-screen quote themes",
+    "Same or different quote across screens",
+    "Adjustable timing, particles, grid opacity, motion, and progress bar",
+    "Light and dark control center",
+    "Importable and exportable preset files",
+    "Source-first install and release verification documentation"
+  ],
+  "public_identity_guidance": "Use SignalWall by Nestcells for public-facing mentions. Do not expose personal founder details unless explicitly provided by the founder."
+}

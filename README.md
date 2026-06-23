@@ -7,6 +7,8 @@ Includes:
 - bilingual EN/FR copy;
 - interactive mini demo;
 - Open Graph / Twitter share metadata;
+- structured data for Organization, WebSite, SoftwareApplication, and FAQ;
+- `llms.txt`, `signalwall-facts.json`, explicit crawler access, and sitemap entries for AI/search discoverability;
 - agent-verifiable source install CTA;
 - responsive screenshots and feature sections.
 

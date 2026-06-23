@@ -5,19 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070806">
   <meta id="metaDescription" name="description" content="SignalWall is a free, open-source, typography-first live wallpaper system with independent controls for every Windows screen.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Nestcells">
+  <meta name="application-name" content="SignalWall">
+  <meta name="keywords" content="SignalWall, Nestcells, open source live wallpaper, Windows live wallpaper, multi monitor wallpaper, typography wallpaper, quote wallpaper, productivity wallpaper, calm desktop, desktop customization">
   <meta property="og:title" content="SignalWall by Nestcells">
   <meta property="og:description" content="Typography-first live wallpapers with per-screen quotes, themes, motion, and shareable presets.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nestcells.com/">
   <meta property="og:image" content="https://nestcells.com/assets/social-preview.png?v=3">
+  <meta property="og:image:alt" content="SignalWall open-source live wallpaper preview with typography-first quote panels.">
   <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Nestcells">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SignalWall by Nestcells">
   <meta name="twitter:description" content="Typography-first live wallpapers with per-screen quotes, themes, motion, and shareable presets.">
   <meta name="twitter:image" content="https://nestcells.com/assets/social-preview.png?v=3">
+  <meta name="twitter:image:alt" content="SignalWall open-source live wallpaper preview with typography-first quote panels.">
   <title>SignalWall - Typography-first live wallpapers for Windows</title>
   <link rel="canonical" href="https://nestcells.com/">
+  <link rel="alternate" hreflang="en" href="https://nestcells.com/">
+  <link rel="alternate" hreflang="fr" href="https://nestcells.com/">
+  <link rel="alternate" hreflang="x-default" href="https://nestcells.com/">
   <link rel="icon" type="image/png" href="assets/signalwall-icon.png">
+  <link rel="help" type="text/plain" href="https://nestcells.com/llms.txt" title="SignalWall facts for AI assistants">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;760;820&display=swap" rel="stylesheet">
@@ -25,16 +36,91 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "SignalWall",
-      "applicationCategory": "DesktopEnhancementApplication",
-      "operatingSystem": "Windows 10, Windows 11",
-      "softwareVersion": "0.3.0",
-      "isAccessibleForFree": true,
-      "license": "https://opensource.org/license/mit",
-      "url": "https://nestcells.com/",
-      "downloadUrl": "https://github.com/Sabertlili/signalwall/releases",
-      "codeRepository": "https://github.com/Sabertlili/signalwall"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://nestcells.com/#organization",
+          "name": "Nestcells",
+          "url": "https://nestcells.com/",
+          "logo": "https://nestcells.com/assets/signalwall-icon.png",
+          "sameAs": [
+            "https://github.com/Sabertlili/signalwall",
+            "https://www.linkedin.com/company/nestcells-studio/",
+            "https://www.facebook.com/profile.php?id=61590995022574",
+            "https://www.producthunt.com/products/signalwall?launch=signalwall",
+            "https://www.kickstarter.com/projects/nestcells/1070361330"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nestcells.com/#website",
+          "name": "SignalWall by Nestcells",
+          "url": "https://nestcells.com/",
+          "publisher": { "@id": "https://nestcells.com/#organization" },
+          "inLanguage": ["en-CA", "fr-CA"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://nestcells.com/#signalwall",
+          "name": "SignalWall",
+          "alternateName": "SignalWall by Nestcells",
+          "description": "A free, open-source, typography-first live wallpaper system for calm Windows multi-monitor desks.",
+          "applicationCategory": "DesktopEnhancementApplication",
+          "operatingSystem": "Windows 10, Windows 11",
+          "softwareVersion": "0.3.0",
+          "isAccessibleForFree": true,
+          "license": "https://opensource.org/license/mit",
+          "url": "https://nestcells.com/",
+          "image": "https://nestcells.com/assets/social-preview.png?v=4",
+          "downloadUrl": "https://github.com/Sabertlili/signalwall/releases",
+          "codeRepository": "https://github.com/Sabertlili/signalwall",
+          "publisher": { "@id": "https://nestcells.com/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "url": "https://github.com/Sabertlili/signalwall/releases"
+          },
+          "featureList": [
+            "Typography-first live wallpaper",
+            "Per-screen quote themes",
+            "Multi-monitor screen ordering",
+            "Light and dark control center",
+            "Shareable preset files",
+            "Open-source release verification"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://nestcells.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is SignalWall?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SignalWall is an open-source Windows live wallpaper app that turns one or more screens into calm typography-based quote wallpapers with per-screen themes, timing, motion, and shareable presets."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is SignalWall free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. SignalWall is MIT licensed and free on GitHub. Optional supporter purchases and campaign pledges help fund signing, polish, documentation, and future platform work."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does SignalWall replace Lively Wallpaper?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SignalWall started as a live wallpaper experience and now includes its own Windows host and control center, so users do not need Lively for the current standalone release."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
 </head>
@@ -97,6 +183,28 @@
       <span data-i18n="stripTwo">Independent screens</span>
       <span data-i18n="stripThree">Shareable presets</span>
       <span data-i18n="stripFour">Agent-verifiable source</span>
+    </section>
+
+    <section class="search-section" id="use-cases" aria-labelledby="search-title">
+      <div class="section-heading compact">
+        <p class="section-label" data-i18n="searchLabel">Built for intentional desks</p>
+        <h2 id="search-title" data-i18n="searchTitle">A live wallpaper for people who think in systems.</h2>
+        <p data-i18n="searchIntro">SignalWall sits where your attention already goes: the desktop. It is made for Windows users, open-source builders, multi-monitor setups, desk setup creators, designers, founders, students, and anyone who wants quotes to behave like a quiet interface instead of a noisy poster.</p>
+      </div>
+      <div class="search-grid">
+        <article>
+          <h3 data-i18n="useCaseOneTitle">For multi-monitor desks</h3>
+          <p data-i18n="useCaseOneBody">Assign one message across every screen or give each monitor its own theme, quote pack, color system, and role.</p>
+        </article>
+        <article>
+          <h3 data-i18n="useCaseTwoTitle">For open-source trust</h3>
+          <p data-i18n="useCaseTwoBody">The source, build scripts, security policy, release notes, and verification workflow are public so the app can be inspected before it runs.</p>
+        </article>
+        <article>
+          <h3 data-i18n="useCaseThreeTitle">For calm productivity</h3>
+          <p data-i18n="useCaseThreeBody">Use design, focus, strategy, motivation, learning, and founder-mode quote themes to keep the desk oriented without adding another feed.</p>
+        </article>
+      </div>
     </section>
 
     <section class="backer-section" id="backers" aria-labelledby="backers-title">
@@ -319,6 +427,27 @@
         <a class="text-link" href="https://www.producthunt.com/products/signalwall?launch=signalwall" rel="noreferrer" data-i18n="productHuntCta">See the Product Hunt launch</a>
       </div>
     </section>
+
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-heading compact">
+        <p class="section-label" data-i18n="faqLabel">Quick answers</p>
+        <h2 id="faq-title" data-i18n="faqTitle">What searchers and supporters usually ask.</h2>
+      </div>
+      <div class="faq-grid">
+        <article>
+          <h3 data-i18n="faqOneQuestion">What makes SignalWall different?</h3>
+          <p data-i18n="faqOneAnswer">Most live wallpapers start with video or visual effects. SignalWall starts with text: hierarchy, pacing, themes, and screen-specific meaning.</p>
+        </article>
+        <article>
+          <h3 data-i18n="faqTwoQuestion">Is it safe to install?</h3>
+          <p data-i18n="faqTwoAnswer">The code is public and the recommended workflow is source-first: inspect, build locally, verify releases, and avoid disabling Windows protections for an unsigned alpha.</p>
+        </article>
+        <article>
+          <h3 data-i18n="faqThreeQuestion">Can I customize the quotes?</h3>
+          <p data-i18n="faqThreeAnswer">Yes. Add one phrase per line, group phrases by theme, choose same or different quotes across screens, then export the complete setup as a preset.</p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -329,11 +458,13 @@
     <p data-i18n="footerCopy">Typography-first, open source, and intentionally quiet.</p>
     <div>
       <a href="https://github.com/Sabertlili/signalwall" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/company/nestcells-studio/" rel="noreferrer">LinkedIn</a>
+      <a href="https://www.facebook.com/profile.php?id=61590995022574" rel="noreferrer">Facebook</a>
       <a href="https://github.com/Sabertlili/signalwall/blob/main/LICENSE" rel="noreferrer">MIT</a>
       <a href="https://github.com/Sabertlili/signalwall/blob/main/SECURITY.md" rel="noreferrer" data-i18n="footerSecurity">Security</a>
     </div>
   </footer>
 
-  <script src="site.js?v=20260622-first-backer"></script>
+  <script src="site.js?v=20260623-seo-ai-social"></script>
 </body>
 </html>
